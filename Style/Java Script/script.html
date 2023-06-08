@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <script src= "./../script.js" type="text/javascript"></script>
+    <script>
+        let student={
+    Name:'manojkumar',
+    age:24,
+    department:'b.tech it',
+    degree:'B.Tech',
+    year:'2023',
+    clg:'Rathinam clg',
+    place:'coimbatore'
+}
+
+let num4=28;
+
+let arr1=[25,35,45,56,89,73]
+let num3=15;
+
+let num1=20;
+let num2=35;
+let result;
+
+function add(){
+    result=num1+num2;
+    alert(result);
+}
+
+function multiply(){
+    result = num1 * num2;
+    alert(result);
+}
+
+function sub(){
+    result = num1 - num2;
+    alert(result);
+}
+
+function div(){
+    result = num1 / num2;
+    alert(result);
+}
+
+
+function modulus(){
+    result = num1 % num2;
+    alert(result);
+}
+ 
+function a(){
+    alert(student.age);
+}
+
+function b(){
+    alert(student.Name);
+}
+
+function c(){
+    alert(student.department);
+}
+
+function d(){
+    alert(student.degree);
+}
+
+function e(){
+    alert(student.year);
+}
+
+function f(){
+    alert(student.clg);
+}
+
+function g(){
+    alert(student.place);
+}
+
+
+function arr(){
+    alert (arr1[3]);
+}
+
+function odd(){
+    result=num2%2;
+    alert(result);
+}
+
+function neg(){
+    if(num3<10){
+      alert('it is a negative number');
+
+    }else(num3>10)
+    {
+        alert('it is a positive number');
+    }
+}
+
+
+function k(x){
+ alert(typeof(x));
+}
+
+k('sathy');
+
+
+function l(y){
+    alert(typeof(y));
+}
+
+l(20);
+
+function mod(x){
+    alert(typeof(x));
+}
+
+
+mod(true);
+
+function mov(y){
+    alert(typeof(y));
+}
+
+mov(null);
+
+
+
+
+function over(){
+    alert('it is over');
+}
+
+function out(){
+    alert('it is out');
+}
+
+function change(){
+    alert('it is change');
+}
+function down(){
+    alert('it is down');
+}
+
+function up(){
+    alert('it is up');
+}
+
+function press(){
+    alert('it is press');
+}
+
+
+function ret(){
+    if(num4%2==0){
+        alert('it is positive number');
+    }
+    else(num4%2==1)
+    {
+        alert('it is negative number');
+
+    }
+
+}
+function retn(x,y){
+    return x+y;
+}
+
+alert(retn(45,73));
+
+
+
+
+    </script>
+    <body>
+      <button onclick="add()">+</button>
+      <button onclick="sub()">-</button>
+      <button onclick="multiply()">*</button>
+      <button onclick="div()">/</button>
+      <button onclick="modulus()">%</button>
+      <button onclick="a()">a</button>
+      <button onclick="b()">b</button>
+      <button onclick="c()">c</button>
+      <button onclick="d()">d</button>
+      <button onclick="e()">e</button>
+      <button onclick="f()">f</button>
+      <button onclick="g()">g</button>
+      <button onclick="arr()">array</button>
+      <button onclick="odd()">odd</button>
+      <button onclick="neg()">positive or negative</button>
+      <button onclick="k()">2</button>
+      <button onclick="l()">3</button>
+      <button onclick="mod()"></button>
+      <button onclick="mov()"></button>
+    
+      <div onmouseover="over()"style="width:300px;height:200px;background-color:red;"></div>
+      <div onmouseout="out()"style="width:300px;height:200px;background-color:blue;"></div>
+      <textarea onchange="change()">please write your comments</textarea>
+      <textarea onkeydown="down()">please put comment</textarea>
+      <textarea onkeyup="up()">put</textarea>
+    
+      <br>
+      <br>
+      <button onkeypress="press()">clicked</button>
+
+      
+      <button onclick="ret()">odd or even</button>
+
+      
+    </body>
+</html>
