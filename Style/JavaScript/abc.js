@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head></head>
-    <script src= "./../script.js" type="text/javascript"></script>
-    <script>
-        let student={
+let student={
     Name:'manojkumar',
     age:24,
     department:'b.tech it',
@@ -90,7 +85,7 @@ function neg(){
     if(num3<10){
       alert('it is a negative number');
 
-    }else(num3>10)
+    }else if(num3>10)
     {
         alert('it is a positive number');
     }
@@ -154,7 +149,7 @@ function ret(){
     if(num4%2==0){
         alert('it is positive number');
     }
-    else(num4%2==1)
+    else if(num4%2==1)
     {
         alert('it is negative number');
 
@@ -166,45 +161,3 @@ function retn(x,y){
 }
 
 alert(retn(45,73));
-
-
-
-
-    </script>
-    <body>
-      <button onclick="add()">+</button>
-      <button onclick="sub()">-</button>
-      <button onclick="multiply()">*</button>
-      <button onclick="div()">/</button>
-      <button onclick="modulus()">%</button>
-      <button onclick="a()">a</button>
-      <button onclick="b()">b</button>
-      <button onclick="c()">c</button>
-      <button onclick="d()">d</button>
-      <button onclick="e()">e</button>
-      <button onclick="f()">f</button>
-      <button onclick="g()">g</button>
-      <button onclick="arr()">array</button>
-      <button onclick="odd()">odd</button>
-      <button onclick="neg()">positive or negative</button>
-      <button onclick="k()">2</button>
-      <button onclick="l()">3</button>
-      <button onclick="mod()"></button>
-      <button onclick="mov()"></button>
-    
-      <div onmouseover="over()"style="width:300px;height:200px;background-color:red;"></div>
-      <div onmouseout="out()"style="width:300px;height:200px;background-color:blue;"></div>
-      <textarea onchange="change()">please write your comments</textarea>
-      <textarea onkeydown="down()">please put comment</textarea>
-      <textarea onkeyup="up()">put</textarea>
-    
-      <br>
-      <br>
-      <button onkeypress="press()">clicked</button>
-
-      
-      <button onclick="ret()">odd or even</button>
-
-      
-    </body>
-</html>
