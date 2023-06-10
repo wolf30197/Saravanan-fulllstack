@@ -161,3 +161,128 @@ function retn(x,y){
 }
 
 alert(retn(45,73));
+
+function set(num){
+    if(num%8==0){
+        alert('it is divisible by 8');
+        if(num%2==0){
+            alert('it is a even number');
+        }else if(num%2==1){
+            alert('it is a odd number');
+        }
+    }else if(num%6==0){
+        alert('it is divisible by 6');
+        if(num%2==0){
+            alert('it is a even number');
+        }else if(num%2==1){
+            alert('it is a odd number');
+        }
+    }else{
+        alert('it is not divisible by 8&6');
+    }
+}
+
+set(966);
+
+function call(num){
+    if(num%9==0){
+        alert('it is divisible by 9');
+        if(num%2==0){
+            alert('it is a even number');
+        }else if(num%2==1){
+            alert('it is a odd number');
+        }
+    }else if(num%7==0){
+        alert('it is divisible by 7');
+        if(num%2==0){
+            alert('it is a even number');
+        }else if(num%2==1){
+            alert('it is a odd number');
+        }
+    }else{
+        alert('it is not divisible by 9&7');
+    }
+}
+
+call(887);
+
+function meta(alpha){
+    switch(alpha){
+        case'a':
+        alert('it is a vowel');
+        break;
+        case'e':
+        alert('it is a vowel');
+        break;
+        case'i':
+        alert('it is a vowel');
+        break;
+        case'o':
+        alert('it is a vowel');
+        break;
+        case'u':
+        alert('it is a vowel');
+        break;
+        default:
+            alert('it is not a vowel');
+    }
+}
+
+meta('u');
+
+function met(alter){
+    if(alter=='a'){
+        alert('it is a vowel');
+    }else if(alter=='e'){
+        alert('it is a vowel');
+    }else if(alter=='i'){
+        alert('it is a vowel');
+    }else if(alter=='o'){
+        alert('it is a vowel');
+    }else if(alter=='u'){
+        alert('it is a vowel');
+    }else{
+        alert('it is not a vowel');
+    }
+}
+
+met('y');
+
+//artithmetic operation
+function basicArithmetic(a ,b ,operation){
+    switch(operation){
+        case'+':
+        alert(a+b);
+        break;
+        case'*':
+        alert(a*b);
+        break;
+        case'-':
+        alert(a-b);
+        break;
+        case'/':
+        alert(a/b);
+        break;
+    }
+}
+
+basicArithmetic(10,12,'*');
+
+
+function arithmetic(a,b,operation){
+    if(operation=='+')
+    {
+        alert(a+b);
+    }else if(operation=='-')
+    {
+        alert(a-b);
+    }else if(operation=='/')
+    {
+        alert(a/b);
+    }else
+    {
+        alert(a*b);
+    }
+}
+
+arithmetic(10,25,'-');
