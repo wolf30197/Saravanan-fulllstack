@@ -286,3 +286,49 @@ function arithmetic(a,b,operation){
 }
 
 arithmetic(10,25,'-');
+
+
+let array1;
+array1=[1,2,3,4,5,6,7,8,9,10];
+ for(let i=0;i<10;i++){
+    if(i%2==0){
+        console.log('Odd',array1[i]);
+    }
+    else if(i%2==1){
+        console.log('even',array1[i]);
+    }
+    }
+
+    
+    for(let i=9;i>=0;i--){
+        console.log(array1[i]);
+    }
+
+    let j=0;
+        while(j<10){
+            if(j%2==0){
+                console.log('odd',array1[j]);
+                j++;
+            }else if(j%2==1){
+                console.log('Even',array1[j]);
+            }
+        }
+    
+
+    
+    do{
+        console.log(array1[j]);
+    }while(j<10){
+        if(j%2==0){
+            console.log('odd',array1[j]);
+            j++;
+        }else if(j%2==1){
+            console.log('Even',array1[j]);
+        }
+    }
+
+
+
+ 
+
+ 
