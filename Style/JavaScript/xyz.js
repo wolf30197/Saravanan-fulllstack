@@ -220,6 +220,13 @@ function calculate(value){
         table.append(get);
 }
 
+function set(){
+    let image=document.createElement('img');
+    document.getElementById('div1').append(image);
+    image.src='./../JavaScript/land_rover.jpg';
+}
+
+
 
 
 
