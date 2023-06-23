@@ -27,6 +27,8 @@ function calculate(value){
 
  function tab(){
     let table=document.createElement('table');
+    table.style.height='100%';
+    
     table.style='border:2px solid black';
     let trheader=document.createElement('tr');
     trheader.style='border:2px solid black';
@@ -218,26 +220,102 @@ function calculate(value){
         give.innerHTML='Maths';
         get.append(give);
         table.append(get);
+     document.getElementById('Table').append(table);
+     document.getElementById('Table').style.display='block';
+     document.getElementById('Image').style.display='none';
+      
+        
 }
+
 
 function set(){
     let image=document.createElement('img');
-    document.getElementById('div1').append(image);
-    image.src='./../JavaScript/land_rover.jpg';
+    document.getElementById('Image').append(image);
+    image.src='./../JavaScript/range rover velar.jpg';
+    document.getElementById('Image').style.display='block';
+    document.getElementById('Table').style.display='none';
 }
 
 
 
+// String length check
+let name='Saravanan';
+console.log(name.length);
+
+//String char check
+let name1='sanjaykrishnan is a it professional,he is working in cisco';
+console.log(name1.charAt(7));
+
+ //String word replace
+console.log(name1.replace('cisco','Amazon'));
 
 
+//String word replaceall
+let name2='sathya is working in data engineer,manoj is working in data engineer,arun is working in data engineer';
+let replace=name2.replaceAll('data engineer','Software Tester');
+console.log(replace);
 
+// String indexof
+console.log(name.indexOf('n'));
 
+//toUpperCase
+console.log(name1.toUpperCase());
 
+//toLowerCase
+console.log(name1.toLowerCase());
 
+//string join
+let firstName='Mukesh Aravind';
+let secondName='Mushfiq';
+let join=firstName+' '+secondName;
+console.log(join);
+console.log(firstName+' '+secondName);
 
+// String concat method
+let names='Anbu';
+let concat=names.concat(' ','Sathya',' ','NithishKumar',' ','ManojKumar');
+console.log(concat);
 
+// String split method
 
+console.log(name2.split(' '));
 
+console.log(name2.split(' ,'));
 
+console.log(name2.split(''));
 
+//slice method
+let a='sathya is working in data engineer,manoj is working in data engineer';
+let slice=a.slice(-21,51);
+console.log(slice);
 
+//substring method
+
+let b='sathya is working in data engineer,manoj is working in data engineer';
+
+let substring=b.substring(52,10);
+console.log(substring);
+
+//substr method
+let c='sathya is working in data engineer,manoj is working in data engineer';
+
+let substr=c.substr(10,7);
+console.log(substr);
+
+//includes method
+
+let d='sanjaykrishnan is a it professional,he is working in cisco';
+let includes=d.includes('cisco');
+console.log(includes);
+
+//startsWith method
+let e='sanjaykrishnan is a it professional,he is working in cisco';
+let starts=e.startsWith('sanjay');
+console.log(starts);
+
+//endsWith method
+
+let f='sanjaykrishnan is a it professional,he is working in cisco';
+let ends=f.endsWith('working');
+console.log(ends);
+console.log(f.endsWith('cisco'));

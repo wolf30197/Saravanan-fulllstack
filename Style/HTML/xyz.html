@@ -1,6 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <style>
+
+
+        .dialog{
+          background-color:blue;
+          box-shadow:20px 20px 15px 12px black;
+
+          
+          position:absolute;
+          top:40%;
+          left:40%;
+          display:none;
+          opacity:0.8;
+      
+  
+        }
+        .dialog1{
+          background-color:blue;
+          box-shadow:20px 20px 10px 9px black;
+          
+          position:absolute;
+          top:40%;
+          left:40%;
+          display:none;
+          opacity:0.8;
+        }
+        body{
+          position:relative;
+          height:100vh;
+        }
+        
+       img{
+        height:25vh;
+        width:25vw;
+       }
+      
+        
+
+
+      </style>
 
     </head>
     <script src="./../JavaScript/xyz.js" type="text/javaScript"> </script>
@@ -15,10 +55,24 @@
         <input id="second" type="text"/>
         <button onclick="calculate(value)" value="=">=</button>
         <input id="result" type="text"/>
-      <button onclick="tab()">show</button>
-      <div id="div1">
-        <button onclick="set()">show image</button>
-      </div>
-     
+        <div >  
+          <button id="dia" onclick="tab()" >show table</button>
+        </div>
+        <br>
+        <div >
+          <button id="dia1" onclick="set()">show image</button>
+        </div>
+    
+          <div class="dialog" id="Table">
+          
+          </div>
+          
+          <br>
+        <div class="dialog1"  id="Image">
+          
+        </div>
+
+        
+        
     </body>
 </html>
