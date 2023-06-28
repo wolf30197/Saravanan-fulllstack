@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         document.getElementById('min').innerHTML=date.getMinutes();
         document.getElementById('sec').innerHTML=date.getSeconds();
         document.getElementById('msec').innerHTML=date.getMilliseconds();
-    },1000)
+    },1)
 });
 
 
@@ -79,3 +79,56 @@ let set6=new Date('2023-06-27');
 set6.setMilliseconds('450');
 console.log(set6);
 
+
+//ARRAY METHODS
+
+//length method
+let a=[1,6,34,67,89,3,90,5,78,5,66,78,4,5,58];
+console.log(a.length);
+
+//push method
+let b=['akash','faizal'];
+b.push('manoj','santhosh',98);
+console.log(b);
+
+//pop method
+let d=[3,56,67,'mano'];
+d.pop();
+console.log(d);
+
+//shift method
+let e=['hari',56,67,34,59,'saran',89,789,'ebi'];
+e.shift();
+console.log(e);
+
+//unshift method
+let f=[56,46,456,89,34];
+f.unshift('mushfiq',6,'amith');
+console.log(f);
+
+//concat method
+let g=['karthi','sakthi'];
+let k=[27,46,'sam',89];
+let l=['yethul',568,'sree',479];
+let h=g.concat(k,l);
+console.log(h);
+
+//toString method
+let m=[34,56,9,2,78,65,34,89,93,61];
+console.log(m.toString());
+
+//splice method
+let n=[2,4,7,9];
+n.splice(2,0,'anish','ajay','nithish');
+console.log(n);
+
+//slice method
+let o=[7,35,8,38,94,85,89,24,56,'arun',57,'mukesh',18,'vijay'];
+let p=o.slice(8);
+
+console.log(p);
+
+//reverse method
+let s=['dinesh',54,56,23,567,34,678,984,'Anandhbabu'];
+s.reverse();
+console.log(s);
