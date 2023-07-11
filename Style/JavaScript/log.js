@@ -132,3 +132,60 @@ console.log(p);
 let s=['dinesh',54,56,23,567,34,678,984,'Anandhbabu'];
 s.reverse();
 console.log(s);
+
+//sort method
+let z=['v','d','a','g','s','p'];
+  z.sort()
+  console.log(z);
+
+  //ascending
+  let x=[10,45,23,450,358,879,678,954,807];
+  x.sort(function(q,f){
+    return q-f;
+  })
+  console.log(x);
+
+  //descending
+  x.sort(function(q,f){
+    return f-q;
+  })
+  console.log(x);
+
+  // map() method
+  let y=[23,6,45,12,25,33,9,15];
+  x=y.map(function(aa){
+    return aa*2;
+  })
+  console.log(x);
+
+  //filter() method
+  let w=[13,16,38,46,79,88,96,111];
+  z=w.filter(function(ab){
+    return ab%2==0;
+  })
+  console.log(z);
+
+  //asynchronous function
+  setTimeout(function(){
+    console.log('async');
+  },5000)
+  console.log('sync');
+
+  //callbacks function
+  function multiply(num1,num2,callback)
+  {
+    num3=num1*num2;
+    callback(num3);
+  }
+  function div(a){
+    console.log(a/2)
+    return a/2;
+  }
+  function display(){
+    console.log(a);
+    return(a);
+  }
+
+  multiply(12,10,div);
+  multiply(12,10,display);
+
