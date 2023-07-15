@@ -54,7 +54,7 @@ add(10,12);
 }
 
  async function apiData2(){
-    let response=await fetch("https://date.nager.at/api/v2/publicholidays/2020/US");
+    let response=await fetch("https://dummy.restapiexample.com/api/v1/employee/1");
     let data=await response.json();
     console.log(data.data);
 }
