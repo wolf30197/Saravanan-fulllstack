@@ -3,7 +3,7 @@
     let response=await fetch('https://reqres.in/api/users?page=2');
     let data=await response.json();
     console.log(data.data);
-
+    
     let table=document.createElement('table');
     table.style='border:3px solid black';
     let trow=document.createElement('tr');
@@ -116,6 +116,7 @@ async function apiData(){
     document.body.append(table);
     
 }
+
 
 
 

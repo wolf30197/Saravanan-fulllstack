@@ -4,14 +4,34 @@
 
     </head>
     <style>
-    
+        .block{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+    .block1{
+        background-color: brown;
+        display:none;
+        width:500px;
+        height:600px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+       
     </style>
+    <script src="./../JavaScript/fetch.js" type="text/javascript"></script>
     <script src="./../JavaScript/api.js" type="text/javascript"></script>
     <body>
         <button onclick="getData()" >Api data</button>
         <button onclick="apiData()">Data</button>
-        <div id="block">
+        <button  onclick="apiData1()"> Api</button>
 
+        <div class="block">
+            <div class="block1" id="div">
+
+            </div>
         </div>
+        
     </body>
 </html>
