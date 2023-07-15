@@ -52,4 +52,10 @@ add(10,12);
     document.getElementById('div').append(table);
 
 }
- 
+
+
+async function SetData1(){
+    let response= await fetch("https://gorest.co.in/public/v2/posts"); 
+    let data= await response.json();
+    console.log(data.data);
+}
