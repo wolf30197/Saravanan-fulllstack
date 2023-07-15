@@ -52,10 +52,4 @@ add(10,12);
     document.getElementById('div').append(table);
 
 }
-
- async function apiData2(){
-    let response=await fetch("https://dummy.restapiexample.com/api/v1/employee/1");
-    let data=await response.json();
-    console.log(data.data);
-}
-
+ 
