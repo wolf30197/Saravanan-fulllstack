@@ -57,10 +57,65 @@ add(10,12);
 async function setData1(){
     let response= await fetch('https://reqres.in/api/users?page=2'); 
     let data= await response.json();
-    console.log(data);
+    console.log(data.data);
+
+    let div1=document.createElement('div');
+    div1.style="display:flex";
+    
+    let Data=data.data;
+    div1.style="width:300px";
+
+
+
+      for(let i=0;i<Data.length;i++){
+        let div2=document.createElement('div');
+        div2.style="border:5px solid black";
+        
+        let idata=document.createElement('p');
+        idata.innerHTML=Data[i].id;
+        div2.append(idata);
+
+        let fndata=document.createElement('p');
+        fndata.innerHTML=Data[i].first_name;
+        div2.append(fndata);
+
+        let lndata=document.createElement('p');
+        lndata.innerHTML=Data[i].last_name;
+        div2.append(lndata);
+
+        let edata=document.createElement('p');
+        edata.innerHTML=Data[i].email;
+        div2.append(edata);
+
+        let imgdata=document.createElement('p');
+        let timg=document.createElement('img');
+        timg.src=Data[i].avatar;
+        imgdata.append(timg);
+        div2.append(imgdata);
+        div1.append(div2);
+
+        
+
+
+      }
+    
+
+    document.body.append(div1);
+
+
+
+    }
 
     
-}
+    
+    
+
+       
+    
+
+    
+    
+
 
 
 

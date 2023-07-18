@@ -45,7 +45,7 @@
         let tAvatar=document.createElement('td');
         let timg=document.createElement('img');
         
-        timg.src='datas.avatar';
+        timg.src=datas.avatar;
         tAvatar.append(timg);
         tr.append(tAvatar);
         table.append(tr);
@@ -104,7 +104,7 @@ async function apiData(){
 
         let tAvatar=document.createElement('td');
         let timg=document.createElement('img');
-         timg.src='data.data[i].avatar';
+         timg.src=data.data[i].avatar;
         tAvatar.append(timg);
         tr.append(tAvatar);
         table.append(tr);
