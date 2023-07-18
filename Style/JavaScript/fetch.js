@@ -55,46 +55,13 @@ add(10,12);
 
 
 async function setData1(){
-    let response= await fetch("https://gorest.co.in/public/v2/posts"); 
+    let response= await fetch('https://reqres.in/api/users?page=2'); 
     let data= await response.json();
     console.log(data);
 
-    let table=document.createElement('table');
-    let row=document.createElement('tr');
-    let header=document.createElement('th');
-    header.innerHTML='ID';
-    let header1=document.createElement('th');
-    header1.innerHTML='User ID';
-    let header2=document.createElement('th');
-    header2.innerHTML='Title';
-    let header3=document.createElement('th');
-    header3.innerHTML='Body';
-    row.append(header);
-    row.append(header1);
-    row.append(header2);
-    row.append(header3);
-    table.append(row);
-
-    for(let i=0;i<data.length;i++){
-        let row1=document.createElement('tr');
-        let data=document.createElement('td');
-        data.innerHTML=data[i].id;
-        row1.append(data);
-
-        let data1=document.createElement('td');
-        data1.innerHTML=data[i].user_id;
-        row1.append(data1);
-
-        let data2=document.createElement('td');
-        data2.innerHTML='data[i].title';
-        row1.append(data2);
-
-        let data3=document.createElement('td');
-        data3.innerHTML='data[i].body';
-        row1.append(data3);
-        table.append(row1);
-    }
-    document.body.append(table);
-
+    
 }
+
+
+
 
