@@ -63,7 +63,7 @@ async function setData1(){
     div1.style="display:flex";
     
     let Data=data.data;
-    div1.style="width:300px";
+    div1.style="width:600px";
 
 
 
@@ -87,11 +87,9 @@ async function setData1(){
         edata.innerHTML=Data[i].email;
         div2.append(edata);
 
-        let imgdata=document.createElement('p');
         let timg=document.createElement('img');
         timg.src=Data[i].avatar;
-        imgdata.append(timg);
-        div2.append(imgdata);
+        div2.append(timg);
         div1.append(div2);
 
         
@@ -105,6 +103,73 @@ async function setData1(){
 
 
     }
+
+    function createXMLRequest(){
+      let req=new XMLHttpRequest();
+      req.onreadystatechange=function(){
+        if(this.readyState==4 && this.status==200){
+          console.log('Request Successfull',this.responseText);
+          let response=JSON.parse(this.responseText);
+         console.log(response.data);
+        }
+        else if(this.readyState==0){
+          console.log('Not initialized');
+        }
+        else if(this.readyState==1){
+           console.log('Server connected');
+        }
+        else if(this.readyState==2){
+          console.log('Request receive');
+        }
+        else if(this.readyState==3){
+          console.log('Request processing');
+        }
+      }
+      req.open('GET','https://reqres.in/api/users?page=1',true);
+      req.send();
+
+      let div1=document.createElement('div');
+    div1.style="display:flex";
+    
+    let Data=response.data;
+    div1.style="width:600px";
+
+
+
+      for(let i=0;i<Data.length;i++){
+        let div2=document.createElement('div');
+        div2.style="border:5px solid black";
+        
+        let idata=document.createElement('p');
+        idata.innerHTML=Data[i].id;
+        div2.append(idata);
+
+        let fndata=document.createElement('p');
+        fndata.innerHTML=Data[i].first_name;
+        div2.append(fndata);
+
+        let lndata=document.createElement('p');
+        lndata.innerHTML=Data[i].last_name;
+        div2.append(lndata);
+
+        let edata=document.createElement('p');
+        edata.innerHTML=Data[i].email;
+        div2.append(edata);
+
+        let timg=document.createElement('img');
+        timg.src=Data[i].avatar;
+        div2.append(timg);
+        div1.append(div2);
+
+        
+
+
+      }
+  
+          document.body.append(div1);
+
+    }
+    
 
     
     
