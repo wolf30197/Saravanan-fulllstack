@@ -1,8 +1,30 @@
-function add(a,b){
-    let result=a*b;
-    console.log(result);
-}
-add(10,12);
+let w=[13,16,38,46,79,88,96,111];
+  z=w.filter((ab)=>{
+    return ab%2==0;
+  })
+  console.log(z);
+
+
+  let x=[10,45,23,450,358,879,678,954,807];
+  x.sort((q,f)=>{
+    return q-f;
+  })
+  console.log(x);
+
+  x.sort((q,f)=>{
+    return f-q;
+  })
+  console.log(x);
+
+
+
+let y=[23,6,45,12,25,33,9,15];
+x=y.map((aa)=>{
+  return aa*2;
+})
+console.log(x);
+
+
 
  async function apiData1(){
     let response= await fetch("https://dummy.restapiexample.com/api/v1/employees"); 
@@ -169,19 +191,220 @@ async function setData1(){
       
 
     }
+
+
+  
+  
     
 
     
     
+      //Inheritance concept
+
+     class Student{
+      constructor(fName,lName){
+        this.firstName=fName;
+        this.lastName=lName;
+
+      }
+      getFullName(){
+        return this.firstName+" "+this.lastName;
+      }
+     }  
+
+     let std=new Student('Santhosh','Sandy');
+     console.log(std.getFullName());
     
 
-       
     
+    class GetAddress extends Student{
+      constructor(fName,lName,address){
+        super(fName,lName);
+        this.address=address;
 
-    
-    
+      }
+      getAddress(){
+        return this.getFullName()+this.address;
+      }
+    }
+
+let s2=new GetAddress('Santhosh','Sandy','Coimbatore');
+
+console.log(s2.getAddress());
 
 
+
+class Showroom{
+  constructor(bike,price,model){
+    this.motorbike=bike;
+    this.bikeprice=price;
+    this.bikemodel=model;
+
+  }
+  getbikeDetails(){
+    return this.motorbike+" "+this.bikeprice+" "+this.bikemodel;
+  }
+}
+
+let data=new Showroom('Yamaha',200000,'R15 V3');
+console.log(data.getbikeDetails());
+
+class getManufactured extends Showroom{
+        constructor(bike,price,model,place){
+          super(bike,price,model);
+          this.place=place;
+        }
+        getPlace(){
+          return this.getbikeDetails()+" "+this.place;
+        }
+}
+
+let s=new getManufactured('Yamaha',200000,'R15 V3','Kozhikode');
+console.log(s.getPlace());
+
+
+
+
+
+class InformationTechnology{
+  constructor(cName,Type){
+    this.companyName=cName;
+    this.companyType=Type;
+  }
+  getCompanyDetails(){
+    return this.companyName+" "+this.companyType;
+  }
+}
+  let Sdata=new InformationTechnology('Cisco','Productbase');
+  console.log(Sdata.getCompanyDetails());
+
+
+  class TechField extends InformationTechnology{
+    constructor(cName,Type,location,working){
+      super(cName,Type);
+         this.companyLocation=location;
+         this.companyWorking=working;
+    }
+    getDetails(){
+      return this.getCompanyDetails()+" "+this.companyLocation+" "+this.companyWorking;
+    }
+  }
+let Company=new TechField('Cisco','Productbase','Chennai','Developer')
+console.log(Company.getDetails());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let noOfElements=10;
+let page=3;
+var productData=[];
+
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((response) => response.json())
+  .then((json) => paginate(json));
+
+let div1=document.createElement('div');
+  div1.style="width:100%";
+function paginate (response){
+  for(let i=noOfElements*(page-1);i<=(noOfElements*page)-1;i++){
+    let div2=document.createElement('div');
+              div2.style="border:5px solid black";
+              let idata=document.createElement('p');
+              idata.innerHTML=response[i].userId;
+              div2.append(idata);
+      
+              let fndata=document.createElement('p');
+              fndata.innerHTML=response[i].id;
+              div2.append(fndata);
+      
+              let lndata=document.createElement('p');
+              lndata.innerHTML=response[i].title;
+              div2.append(lndata);
+      
+              let edata=document.createElement('p');
+              edata.innerHTML=response[i].body;
+              div2.append(edata);
+              div1.append(div2);
+
+  }
+  document.body.append(div1);
+
+
+}
+
+
+
+
+var productData=[];
+let items=10;
+let currentpage=1;
+
+
+async function apiPaginate(){
+  let data=await fetch('https://jsonplaceholder.typicode.com/posts');
+  let api=await data.json();
+  productData=api;
+}
+
+let div3=document.createElement('div');
+  div3.style="width:100%";
+function paginate (productData){
+  for(let i=items*(currentpage-1);i<=(items*currentpage)-1;i++){
+
+    let div2=document.createElement('div');
+    div2.style='background-color:blue';
+  let uId=document.createElement('p');
+  uId.innerHTML=productData[i].userId;
+  div2.append(uId);
+  let idData=document.createElement('p');
+  idData.innerHTML=productData[i].id;
+  div2.append(idData);
+  let tData=document.createElement('p');
+  tData.innerHTML=productData[i].title;
+  div2.append(tData);
+  let bData=document.createElement('p');
+  bData.innerHTML=productData[i].body;
+  div2.append(bData);
+  div3.append(div2);
+
+  }
+
+ducument.body.append(div3);
+
+}
+
+
+
+//const previousPage=()=>{
+  //if((currentpage-1)*items){
+    //currentpage=currentpage-1;
+   // paginate();
+  //}
+//}
+
+//const nextPage=()=>{
+  //if((currentpage*items)/productData.length){
+   // currentpage=currentpage+1;
+  //  paginate(productData);
+ // }
+//}
 
 
 

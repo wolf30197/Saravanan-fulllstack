@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <style>
+         .header{
+            background-color:#4d94ff;
+            height:130px;
+            width:100%;
+        }
+        .img{
+            height:98px;
+        }
+        .we-logo{
+            width:20%;
+        }
+        .buttons{
+            width: 60%;
+            height:25%;
+            display: flex;
+            justify-content: space-between;
+            padding-left:40%;
+        }
+        .menu{
+            font-family:sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            color:white;
+            background-color:#4d94ff;
+            height:100%;
+            border:none;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            width:20%;
+        }
+        .selected{
+            color:#4d94ff;
+            background-color: white;
+        }
+        .contact-img{
+            width:50%;
+            height:80%;
+        }
+        .img-container{
+            display:flex;
+        }
+        
+        .form-para{
+            color: darkgray;
+            text-align: center;
+            font-size:30px;
+            position:relative;
+            left:20%;
+        }
+        .ip{
+            display:flex;
+            flex-direction: column;
+            width:500px;
+            height:40px;
+            padding:10px;
+            position:relative;
+            left:20%;
+            margin:10px;
+            border:none;
+            border-bottom: 2px solid gray;
+            outline:none;
+        }
+        .send{
+            background-color: #4d94ff;
+            color:white;
+            font-family: sans-serif;
+            height:50px;
+            width:120px;
+            border:2px solid white;
+            border-radius:15px;
+            position:relative;
+            top:20px;
+            left:60%;
+        }
+    
+
+
+        .bottom-container{
+            background-color: #4d94ff;
+            width:100%;
+            height:330px;
+            position:relative;
+         }
+         .card{
+            display:flex;
+            position:relative;
+         }
+        .hyper-para{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            color:white;
+        }
+        .para-container3{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position:absolute;
+            left:10%;
+            top:-50px;
+        }
+        .para-container4{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position:absolute;
+            left:45%;
+            top:-50px;
+        }
+        .para-container5{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position:absolute;
+            left:71%;
+            top:-50px;
+        }
+        a{
+            color:white;
+            font-size: 18px;
+            font-family: sans-serif;
+            padding:10px;
+            text-decoration: none;
+        }
+        .copyright{
+            color:white;
+        }
+
+    
+    </style>
+    <script src="./../JAVASCRIPT/wee.js" type="text/JavaScript"></script>
+    <body>
+        <div class="header">
+            <div class="img">
+             <img class="we-logo" src="C:\gitub\Saravanan-fulllstack\Style\SampleExercise1\Assets\logo.png" height="130px"/>
+ 
+            </div>
+            <div class="buttons">
+                <button onclick="navigateHome()" class="menu ">Home</button>
+                <button onclick="navigateAboutus()"class="menu">About Us</button>
+                <button  onclick="navigateCreditscore()"class="menu">Credit Score</button>
+                <button onclick="navigateLoans()" class="menu">Loans</button>
+                <button onclick="navigateCards()" class="menu">Cards</button>
+                <button onclick="navigateContactus()" class="menu selected">Contact Us</button>
+    
+ 
+            </div>
+ 
+         </div>
+
+         <div class="contact-container">
+            <div class="img-container">
+                <img class="contact-img" src="C:\gitub\Saravanan-fulllstack\Style\SampleExercise1\Assets\contact.jpg"/>
+
+                <div class="form-container">
+                    <p class="form-para">Send us your messages</p>
+                
+                    <input class="ip" type="text" placeholder="Your Name">
+                    <input   class="ip" type="text" placeholder="Your Email">
+                    <input class="ip" type="text" placeholder="Your Phone">
+                    <textarea class="ip" placeholder="Your Message"></textarea>
+                    <button class="send">Send</button>
+
+                    </div>
+                    
+                    
+    
+    
+                </div>
+
+
+                <div class="bottom">
+                    <div class="bottom-container">
+                        <img class="we-logo1" src="C:\gitub\Saravanan-fulllstack\Style\SampleExercise1\Assets\logo.png" height="150px"/>
+    
+                        <div class="card">  
+    
+                            <div class="para-container3">
+                                <p class="hyper-para">CREDIT SCORE</p>
+                                <a  href="C:\gitub\Saravanan-fulllstack\Style\SampleExercise1\HTML\creditScore.html">Check Online</a>
+                                <a  href="C:\gitub\Saravanan-fulllstack\Style\SampleExercise1\HTML\creditScore.html">Check your Credit Score</a>
+                            </div>
+        
+                            <div class="para-container4">
+                                <p class="hyper-para">LOANS</p>
+                                <a href="C:\gitub\Saravanan-fulllstack\Style\SampleExercise1\HTML\loans.html">Apply Now!</a>
+                                <a href="C:\gitub\Saravanan-fulllstack\Style\SampleExercise1\HTML\loans.html">Personal Loans</a>
+                                <p class="copyright">Copyright 2023 Weecredit</p>
+                            </div>
+                           
+                            <div class="para-container5">
+                                <p class="hyper-para">LEARN ABOUT WEECREDIT</p>
+                                <a href="C:\gitub\Saravanan-fulllstack\Style\SampleExercise1\HTML\About us.html">About Us</a>
+                                <a  href="C:\gitub\Saravanan-fulllstack\Style\SampleExercise1\HTML\contactUs.html">Contact Us</a>
+                            </div>
+                        </div>
+                        
+                        
+                     </div>
+    
+                </div>
+
+    
+            </div>
+            
+    
+
+    </body>
+</html>
