@@ -306,105 +306,20 @@ console.log(Company.getDetails());
 
 
 
-
-
-
-
-
-let noOfElements=10;
-let page=3;
-var productData=[];
-
-
-fetch('https://jsonplaceholder.typicode.com/posts')
-  .then((response) => response.json())
-  .then((json) => paginate(json));
-
-let div1=document.createElement('div');
-  div1.style="width:100%";
-function paginate (response){
-  for(let i=noOfElements*(page-1);i<=(noOfElements*page)-1;i++){
-    let div2=document.createElement('div');
-              div2.style="border:5px solid black";
-              let idata=document.createElement('p');
-              idata.innerHTML=response[i].userId;
-              div2.append(idata);
-      
-              let fndata=document.createElement('p');
-              fndata.innerHTML=response[i].id;
-              div2.append(fndata);
-      
-              let lndata=document.createElement('p');
-              lndata.innerHTML=response[i].title;
-              div2.append(lndata);
-      
-              let edata=document.createElement('p');
-              edata.innerHTML=response[i].body;
-              div2.append(edata);
-              div1.append(div2);
-
-  }
-  document.body.append(div1);
-
-
-}
-
-
-
-
 var productData=[];
 let items=10;
-let currentpage=1;
+let currentpage=5;
 
 
-async function apiPaginate(){
-  let data=await fetch('https://jsonplaceholder.typicode.com/posts');
-  let api=await data.json();
+async function  apiPaginate(){
+  let response=await fetch('https://jsonplaceholder.typicode.com/posts');
+  let api=await response.json();
   productData=api;
 }
-
-let div3=document.createElement('div');
-  div3.style="width:100%";
-function paginate (productData){
+function Paginate(productData){
   for(let i=items*(currentpage-1);i<=(items*currentpage)-1;i++){
 
-    let div2=document.createElement('div');
-    div2.style='background-color:blue';
-  let uId=document.createElement('p');
-  uId.innerHTML=productData[i].userId;
-  div2.append(uId);
-  let idData=document.createElement('p');
-  idData.innerHTML=productData[i].id;
-  div2.append(idData);
-  let tData=document.createElement('p');
-  tData.innerHTML=productData[i].title;
-  div2.append(tData);
-  let bData=document.createElement('p');
-  bData.innerHTML=productData[i].body;
-  div2.append(bData);
-  div3.append(div2);
-
-  }
-
-ducument.body.append(div3);
-
-}
-
-
-
-//const previousPage=()=>{
-  //if((currentpage-1)*items){
-    //currentpage=currentpage-1;
-   // paginate();
-  //}
-//}
-
-//const nextPage=()=>{
-  //if((currentpage*items)/productData.length){
-   // currentpage=currentpage+1;
-  //  paginate(productData);
- // }
-//}
+  }}
 
 
 
