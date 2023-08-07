@@ -199,7 +199,7 @@ async function setData1(){
 
     
     
-      //Inheritance concept
+      //Class & Inheritance concept in Javascript
 
      class Student{
       constructor(fName,lName){
@@ -296,30 +296,112 @@ console.log(Company.getDetails());
 
 
 
+class Technology{
+  constructor(data,state){
+         this.data=data;
+         this.state=state;
+  }
+  get(){
+    return this.data+" "+this.state;
+  }
 
-
-
-
-
-
-
-
-
-
-var productData=[];
-let items=10;
-let currentpage=5;
-
-
-async function  apiPaginate(){
-  let response=await fetch('https://jsonplaceholder.typicode.com/posts');
-  let api=await response.json();
-  productData=api;
 }
-function Paginate(productData){
-  for(let i=items*(currentpage-1);i<=(items*currentpage)-1;i++){
 
-  }}
-
+let set=new Technology('justin','Karnataka');
+console.log(set.get());
 
 
+class Techies extends Technology{
+  constructor(data,state,country){
+         super(data,state);
+         this.countryName=country;
+  }
+  getdata(){
+    return this.get()+" "+this.countryName;
+  }
+}
+let cdata=new Techies('justin','Karnataka','India');
+console.log(cdata.getdata());
+
+
+
+
+class jobs{
+  constructor(Techie,Telecalling){
+    this.techJobs=Techie;
+    this.bpoJobs=Telecalling;
+  }
+  getjob(){
+    return this.techJobs+" "+this.bpoJobs;
+  }
+}
+let jData=new jobs('Freshworks','pinnacle');
+console.log(jData.getjob());
+
+
+class work extends jobs{
+  constructor(Techie,Telecalling,DataAnalyst,VoiceProcess,seniorDeveloper,ItEngineer){
+    super(Techie,Telecalling);
+    this.data=DataAnalyst;
+    this.voice=VoiceProcess;
+    this.developer=seniorDeveloper;
+    this.Engineering=ItEngineer;
+  }
+  getJobDetails(){
+    return this.getjob()+" "+this.data+" "+this.voice+" "+this.developer+" "+this.Engineering;
+  }
+}
+let addData=new work('Freshworks','pinnacle','Akash','Malayalam','Cisco','Rathinam');
+console.log(addData.getJobDetails());
+
+
+
+
+
+
+
+
+
+
+
+let noOfElements=10;
+let page=2;
+let productTable=[];
+
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json())
+  .then(json => productTable=json);
+
+
+function itemspage (){
+  for(let i=noOfElements*(page-1);i<=(noOfElements*page)-1;i++){
+    console.log(productTable[i]);
+
+  }
+  
+
+
+}
+
+
+
+
+function createXMLRequest1(){
+  let req=new XMLHttpRequest();
+  req.onreadystatechange=function(){
+    if(this.readyState==4 && this.status==200){
+      console.log('Request Successfull',this.responseText);
+      let response=JSON.parse(this.responseText);
+      
+      res=response.data;
+
+
+      
+  }
+
+
+}
+req.open('PUT','https://jsonplaceholder.typicode.com/posts/1',true);
+req.send('User','sathish');
+}
