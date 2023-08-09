@@ -119,20 +119,6 @@ async function apiData(){
 
 
 
-
-function storage(){
-    let value=localStorage.setItem('User','Sathya','Deepak','Santhosh');
-    console.log(value);
-}
-
-
-function Storage1(){
-   let data= localStorage.getItem('User');
-    console.log(data);
-}
-
-
-    
          
 
 

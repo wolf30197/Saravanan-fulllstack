@@ -197,7 +197,7 @@ async function setData1(){
   
     
 
-    
+    let productTable= [];
     
       //Class & Inheritance concept in Javascript
 
@@ -364,44 +364,4 @@ console.log(addData.getJobDetails());
 
 
 
-let noOfElements=10;
-let page=2;
-let productTable=[];
 
-
-fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response => response.json())
-  .then(json => productTable=json);
-
-
-function itemspage (){
-  for(let i=noOfElements*(page-1);i<=(noOfElements*page)-1;i++){
-    console.log(productTable[i]);
-
-  }
-  
-
-
-}
-
-
-
-
-function createXMLRequest1(){
-  let req=new XMLHttpRequest();
-  req.onreadystatechange=function(){
-    if(this.readyState==4 && this.status==200){
-      console.log('Request Successfull',this.responseText);
-      let response=JSON.parse(this.responseText);
-      
-      res=response.data;
-
-
-      
-  }
-
-
-}
-req.open('PUT','https://jsonplaceholder.typicode.com/posts/1',true);
-req.send('User','sathish');
-}
