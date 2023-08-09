@@ -1,12 +1,12 @@
-//document.addEventListener('DOMContentLoaded',()=>{
-   // setInterval(function(){
-       // let date=new Date();
-       // document.getElementById('hour').innerHTML=date.getHours();
-    //    document.getElementById('min').innerHTML=date.getMinutes();
-       // document.getElementById('sec').innerHTML=date.getSeconds();
-       // document.getElementById('msec').innerHTML=date.getMilliseconds();
-   // },1)
-//});
+document.addEventListener('DOMContentLoaded',()=>{
+   setInterval(function(){
+        let date=new Date();
+        document.getElementById('hour').innerHTML=date.getHours();
+     document.getElementById('min').innerHTML=date.getMinutes();
+       document.getElementById('sec').innerHTML=date.getSeconds();
+      // document.getElementById('msec').innerHTML=date.getMilliseconds();
+    },1)
+});
 
 
 let date=new Date();

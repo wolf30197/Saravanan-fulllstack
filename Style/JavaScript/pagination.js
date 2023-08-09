@@ -16,20 +16,31 @@ let productTable= [];
       selectElements.append(option);
     }
   getTotalPages();
-  })
+  });
+  
   
 
 
 function previousPage(){
+  if(page<=1){
+    window.history.go(getTotalPages);
+  }else{
     page=page-1;
     itemsPage(); 
+  }
+    
 
   }
 
 
 function nextPage(){
+  if(page>=20){
+window.history.go(getTotalPages);
+  }else{
     page=page+1;
     itemsPage();
+  }
+    
     
 }
 
@@ -71,6 +82,5 @@ function next(value) {
   itemsPage();
   getTotalPages()
 }
-
 
 
