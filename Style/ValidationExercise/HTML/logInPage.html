@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <style>
+        .img{
+            filter:brightness(100%);
+        }
+        .login{
+            width:270px;
+            height:350px;
+            border-radius: 25px;
+            position:absolute;
+            top:250px;
+            left:41%;
+        }
+        .log-img{
+            border-top-right-radius:30px;
+            border-bottom-left-radius: 30px;
+        }
+        #head{
+            position:absolute;
+            top:10px;
+            left:15%;
+            color:white;
+        }
+        #uName{
+            position:absolute;
+            top:100px;
+            left:40px;
+            height:35px;
+            width:180px;
+            font-weight: bold;
+            border:5px solid hsl(32, 63%, 33%);
+            border-top-right-radius:10px;
+            text-align: center;
+            background-color:transparent;
+        }
+        #passwd{
+            position:absolute;
+            top:180px;
+            left:40px;
+            height:35px;
+            width:180px;
+            border:5px solid hsl(32, 63%, 33%);
+            font-weight: bold;
+            border-top-right-radius: 10px;
+            text-align: center;
+            background-color:transparent;
+        }
+        #logIn{
+            position:absolute;
+            top:250px;
+            left:70px;
+            height:35px;
+            width:120px;
+            border:none;
+            font-weight: bold;
+            border-radius: 24px;
+            text-align: center;
+            background-color:#04372e;
+            color:white;
+        }
+        .text{
+            color:white;
+            position:absolute;
+            left:15%;
+            top:80%;
+        }
+        .text1{
+            color:white;
+            position:absolute;
+            left:70%;
+            top:80%;
+        }
+        
+body{
+    position:relative;
+    font-family: sans-serif;
+}
+input{
+    color:white;
+}
+
+    </style>
+    <script src="./../JAVASCRIPT/validation.js" text="text/javascript"></script>
+    <body>
+            <img class="img" src="C:\Users\SARAVANAN\Pictures\alexandru-acea--WBYxmW4yuw-unsplash.jpg" width="100%" height="685px">
+
+          
+        <div class="login">
+            <img class="log-img" src="C:\Users\SARAVANAN\Downloads\pexels-tima-miroshnichenko-4841641.jpg" width="270px" height="340px">
+            <h1 id="head">Engineer DB</h1>
+            <input id="uName" type="text" placeholder="UserName" >
+            <input id="passwd" type="text" placeholder="Password">
+            <button onclick="validateLogin()" id="logIn">LogIn</button>
+            <h5 class="text">Dont have an account</h5>
+            <h5 class="text1">Signup</h5>
+
+        </div>
+      
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

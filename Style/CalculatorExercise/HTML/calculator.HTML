@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <style>
+        .main{
+
+         align-items: center;
+         justify-content: center;
+        }
+        .cal-div{
+            width:300px;
+            height:500px;
+            background-color:blue;
+            border:7px solid black;
+            border-radius: 14px;
+        }
+        #screen{
+            width:300px;
+            height:80px;
+            background-color:white;
+        }
+        #screen1{
+            width:300px;
+            height:70px;
+            background-color:brown;
+        }
+        button{
+            width:50px;
+            height:40px;
+            background-color: brown;
+            color:black;
+            border-radius: 10px;
+            border:none;
+            font-size: 20px;
+            margin:10px;
+        }
+        .cal{
+            display:flex;
+        }
+        .button{
+            width:240px;
+            margin:10px;
+        }
+        .operator{
+            width:60px;
+            padding-top: 14%;
+            margin:1px;
+        }
+        
+    </style>
+    <script src="./../JAVASCRIPT/cal.js" text="text/javascript"></script>
+    
+    <body>
+        <div class="main">
+            <div class="cal-div">
+                <div id="screen">
+
+
+                </div>
+                <div id="screen1"></div>
+                <div class="cal">
+                    <div class="button">
+                        <button onclick="appendNumber('0')">0</button>
+                        <button onclick="appendNumber('1')">1</button>
+                        <button onclick="appendNumber('2')">2</button>
+                        <button onclick="appendNumber('3')">3</button>
+                        <button onclick="appendNumber('4')">4</button>
+                        <button onclick="appendNumber('5')">5</button>
+                        <button onclick="appendNumber('6')">6</button>
+                        <button onclick="appendNumber('7')">7</button>
+                        <button onclick="appendNumber('8')">8</button>
+                        <button onclick="appendNumber('9')">9</button>
+                        <button onclick="calculate()">=</button>
+                        <button onclick="clearDisplay()">C</button>
+    
+                    </div>
+                    <div class="operator">
+                        <button onclick="appendOperator('/')">/</button>
+                        <button onclick="appendOperator('*')">*</button>
+                        <button onclick="appendOperator('-')">-</button>
+                        <button onclick="appendOperator('+')">+</button>
+                        <button onclick="appendOperator('%')">%</button>
+                        
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+               
+                
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

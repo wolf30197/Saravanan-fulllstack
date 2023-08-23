@@ -8,9 +8,9 @@
             display:flex;
             align-items: center;
             justify-content: center;
+            background-color: ;
         }
     .block1{
-        background-color: brown;
         width:500px;
         height:570px;
         display:flex;
@@ -21,12 +21,57 @@
         border-radius: 10px;
     }
 
-
+    #prev{
+        background-color:darkblue;
+        width:120px;
+        height:30px;
+        border-radius: 25px;
+        border:none;
+        position:absolute;
+        top:60%;
+        left:20%;
+        color:white;
+    }
+    #nxt{
+        background-color:darkblue;
+        width:120px;
+        height:30px;
+        border-radius: 25px;
+        border:none;
+        position:absolute;
+        top:60%;
+        left:50%;
+        color:white;
+    }
+    #page{
+        background-color:darkblue;
+        color:white;
+        width:100px;
+        height:30px;
+        border-radius: 20px;
+        border:none;
+        position:absolute;
+        top:60%;
+        left:30%;
+    }
+    
+#datas{
+    background-color:darkblue;
+    color:white;
+    width:80px;
+    height:30px;
+    border-radius:10px;
+    position:absolute;
+    top:60%;
+    left:40%;
+    border:none;
+}
 
 
     </style>
     <script src="./../JavaScript/fetch.js" type="text/javascript"></script>
     <script src="./../JavaScript/api.js" type="text/javascript"></script>
+    <script src="./../ValidationExercise/JAVASCRIPT/logIn.js" type="text/javascript"></script>
     <body>
         <button onclick="getData()" >Api data</button>
         <button onclick="apiData()">Data</button>
@@ -36,21 +81,24 @@
         <button onclick="storage()">Set</button>
         <button onclick="nextPage()">data</button>
         <button onclick="createXMLRequest1()">xmlhttp</button>
+        <button onclick="fetchData()">japi</button>
 
 
-
-
-
-        <div class="block">
-            <div class="block1" id="div">
-                
-            </div>
         
         </div>
-        <br>
+
+        <div class="page">
+
+            <button onclick="prev()" id="prev">Prev</button>
+        <button id="page"></button>
+        <button onclick="next()" id="nxt">Nxt</button>
         
-        
+        <select id="datas" onchange="sets(value)" >
+        </select>
        
+
+        </div>
+        
 
         
         

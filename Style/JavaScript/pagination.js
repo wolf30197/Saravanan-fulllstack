@@ -1,4 +1,4 @@
-let noOfItems=5;
+let noOfItems=4;
 let page=1;
 let productTable= [];
 
@@ -10,7 +10,7 @@ let productTable= [];
   });
   document.addEventListener('DOMContentLoaded', () => {
     let selectElements = document.getElementById('Elements');
-    for (let i = 5; i <50; i = i + 5) {
+    for (let i = 5; i <70; i = i + 5) {
       let option = document.createElement('option');
       option.innerHTML = i;
       selectElements.append(option);
@@ -18,27 +18,29 @@ let productTable= [];
   getTotalPages();
   });
   
-  
-
 
 function previousPage(){
+  
   if(page<=1){
-    window.history.go(getTotalPages);
+    window.history.go(1);
   }else{
     page=page-1;
-    itemsPage(); 
+    currentPage=currentPage-1;
+    itemsPage();
+    pageNum();
   }
-    
-
   }
 
 
 function nextPage(){
-  if(page>=20){
-window.history.go(getTotalPages);
+ 
+  if(page>=25){
+     window.history.go(1);
   }else{
     page=page+1;
+    currentPage=currentPage+1;
     itemsPage();
+    pageNum();
   }
     
     
@@ -75,6 +77,7 @@ function itemsPage(){
         div1.append(div2);
   }
   document.body.append(div1);
+  pageNum();
 }
 
 function next(value) {
@@ -82,5 +85,25 @@ function next(value) {
   itemsPage();
   getTotalPages()
 }
+
+
+var currentPage=1;
+var totalPage=1;
+function pageNum(){
+  let pages=document.getElementById('pageNo');
+  for(let i=totalPage*(currentPage-1);i<=(totalPage*currentPage);i++){
+    pages.innerHTML=i;
+  }
+}
+  
+
+
+
+
+
+
+
+
+
 
 
