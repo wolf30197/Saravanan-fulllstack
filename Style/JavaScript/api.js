@@ -125,27 +125,169 @@ async function apiData(){
 
          
          
+    //To fetch api to append a table and style with the table task    
         
-        
 
 
 
 
-   
-
-
-
-
-
-
+  let items=10;
+let noOfPage=1;
+let pageData=[];
 
 
 
 
 
 
+fetch('https://jsonplaceholder.typicode.com/todos')
+  .then((response) => response.json())
+  .then((json) => {
+   pageData=json
+   tableData();
+  });
 
 
+  
+
+
+let div5=document.createElement('div');
+div5.style.margin="3%";
+function tableData(){
+
+  let table=document.createElement('table');
+  table.setAttribute("id","mytable");
+  table.style.border="2px solid black";
+  table.style.width="100%";
+  table.style.height="60%";
+  let tablerow=document.createElement('tr');
+  let theader=document.createElement('th');
+  theader.style.border="2px solid black";
+  theader.innerHTML='UserId';
+  let tid=document.createElement('th');
+  tid.style.border="2px solid black";
+  tid.innerHTML='ID';
+  let title=document.createElement('th');
+  title.style.border="2px solid black";
+  title.innerHTML='Title';
+  let tcomplete=document.createElement('th');
+  tcomplete.style.border="2px solid black";
+  tcomplete.innerHTML='Completed';
+  tablerow.append(theader);
+  tablerow.append(tid);
+  tablerow.append(title);
+  tablerow.append(tcomplete);
+  table.append(tablerow);
+  div5.innerHTML='';
+
+    for(let i=items*(noOfPage-1);i<=(items*noOfPage)-1;i++){
+      let trow1=document.createElement('tr');
+      trow1.setAttribute("id",'mytablerow');
+      let tdata=document.createElement('td');
+      tdata.style.border="2px solid black";
+      tdata.innerHTML=pageData[i].userId;
+      trow1.append(tdata);
+
+      let tdata1=document.createElement('td');
+      tdata1.style.border="2px solid black";
+      tdata1.innerHTML=pageData[i].id;
+      trow1.append(tdata1);
+
+      let tdata2=document.createElement('td');
+      tdata2.style.border="2px solid black";
+      tdata2.innerHTML=pageData[i].title;
+      trow1.append(tdata2);
+
+      let tdata3=document.createElement('td');
+      tdata3.style.border="2px solid black";
+      tdata3.innerHTML=pageData[i].completed;
+      trow1.append(tdata3);
+
+      table.append(trow1);
+      div5.append(table);
+  }
+  document.body.append(div5);
+   style();
+pageNum();
+}
+
+function prev(){
+  if(noOfPage<=1){
+    window.history.go(1);
+  }else{
+    noOfPage=noOfPage-1;
+    currentPage=currentPage-1;
+    tableData();
+    pageNum();
+    style();
+  }
+
+}
+
+function next(){
+  if(noOfPage>=20){
+    window.history.go(1);
+  }else{
+    noOfPage=noOfPage+1;
+    currentPage=currentPage+1;
+    tableData();
+    pageNum();
+    style();
+  }
+
+} 
+
+
+
+let currentPage=1;
+let totalPage=1;
+function pageNum(){
+  let pages=document.getElementById('page');
+  for(let i=totalPage*(currentPage-1);i<=(totalPage*currentPage);i++){
+    pages.innerHTML=i;
+  }
+}
+
+let color=document.getElementById("mytable");
+
+function style(){
+  
+  let rcolor=document.getElementsByTagName('tr');
+  for(let i=0;i<rcolor.length;i++){
+    if(i%2===0){
+        rcolor[i].style.backgroundColor="darkgray";
+        rcolor[i].style.color="black";
+    }
+    else{
+      rcolor[i].style.backgroundColor="white";
+      rcolor[i].style.color="black";
+    }
+  }
+
+}
+  
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  let select = document.getElementById('datas');
+  for (let i = 10; i<150; i = i + 10) {
+    let selectdata = document.createElement('option');
+    selectdata.innerHTML = i;
+    select.append(selectdata);
+  }
+getTotal();
+});
+
+
+function sets(value) {
+  items = value;
+  tableData();
+  style()
+  getTotal()
+}
 
 
 

@@ -187,5 +187,4 @@ let z=['v','d','a','g','s','p'];
   }
 
   multiply(12,10,div);
-  multiply(12,10,display);
   
