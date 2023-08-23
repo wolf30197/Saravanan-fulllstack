@@ -24,5 +24,6 @@ function calculate() {
    
     function clearDisplay(){
       document.getElementById('screen').innerHTML='';
+      document.getElementById('screen1').innerHTML='';
     }
   
