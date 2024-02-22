@@ -1,0 +1,57 @@
+<div class="main">
+    <div class="para">
+        <div class="meetingtext">
+            <p class="text">Premium video meetings.
+                Now free for everyone</p>
+                <p class="meettext">we re-engineered the service we built for secure business meetings,Google Meet,to make it free and available for  all</p>
+                <img class="keyboard" src="./../../../assets/images/keyboard.png">
+                <div class="meetingcreate">
+                
+                    <button class="meetingbutton" (click)="popupDisplay()" >+New meeting</button>
+                    
+                    <input class="search" type="text" placeholder=" Enter a code or link" for="myInput">
+                    <button class="joinbutton">Join</button>
+                </div>
+                <div class="underline">
+
+                </div>
+                <div class="undertext">
+                    <p class="about"><span>Learn more</span>about Google Meet</p>
+                   
+                    <div class="popup" *ngIf="popup">
+                        
+                        <button class="target">Create a meeting for later</button>
+                        <button class="target">Start an instant meeting</button>
+                        <button class="target">Schedule in Google Calendar</button>
+
+                    </div>
+                    
+
+                </div>
+               
+        </div>
+          
+    </div>
+    <div class="content">
+        <div class="meeting" >
+            
+           
+            <div id="meetingContainer" *ngFor="let meeting of getPaginatedData(); let i = index">
+                <img class="lesser" src="./../../../assets/images/lessthanlogo.png" (click)="previousPage()" >
+                <div class="meetingData">
+                    <img class="meetingimage" [src]="meeting.image" alt="Meeting Image">
+                    <h2>{{ meeting.linktext }}</h2>
+                    <p>{{ meeting.meettext }}</p>
+            
+                </div>
+               
+                <img class="greater" src="./../../../assets/images/greaterthanlogo.png" (click)="nextPage()" >
+              </div>
+           
+
+
+        </div>
+        
+    </div>
+
+</div>

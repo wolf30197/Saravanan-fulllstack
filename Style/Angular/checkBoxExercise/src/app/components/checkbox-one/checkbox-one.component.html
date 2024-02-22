@@ -1,0 +1,22 @@
+<h2> A Component</h2>
+<div class="main">
+    
+    <div class="one">
+        <div class="data" >
+               <label *ngFor="let data of todoList ">
+                <input type="checkbox" id="checkedData" (click)="checkboxChanged(data)">{{data}}
+               </label>
+                <div class="popup" *ngIf="popupDisplay">
+                   your item is empty
+                </div>
+            
+            
+        </div>
+        
+        
+    
+    </div>
+    <div class="two">
+        
+    </div>
+</div>

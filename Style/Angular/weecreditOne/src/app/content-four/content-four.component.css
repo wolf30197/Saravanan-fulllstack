@@ -1,0 +1,16 @@
+.main{
+    display:flex;
+}
+.one{
+    width:50%;
+    text-align: center;
+    margin-top: 5%;
+}
+.two{
+    width:50%;
+}
+.line{
+    background-color: darkgray;
+    height:1px;
+    width:98%;
+}

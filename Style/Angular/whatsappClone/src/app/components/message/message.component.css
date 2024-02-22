@@ -1,0 +1,10 @@
+.messagebody{
+    width:67.2%;
+    background-color:white;
+    height:678px;
+    display:flex;
+    flex-direction: column;
+    position:absolute;
+    top:28px;
+    margin-left:28.8%;
+}

@@ -1,0 +1,42 @@
+<div class="sidenav">
+    <div class="first">
+        <img class="one" src="../../../assets/images/insta-name.png">
+    </div>
+    <div class="second">
+        <div class="content" *ngFor="let data of sidenavData ">
+            <div class="frst">
+                <img class="two" [src]="data.image">
+            </div>
+            <div class="scnd">
+                {{data.name}}
+            </div>
+             
+           
+
+        </div>
+    </div>
+    <div class="third">
+        <div class="content-1">
+            <div class="fir">
+               <img class="two" src="../../../assets/images/threads.png">
+            </div>
+            <div class="sec">
+                <p>Threads</p>
+            </div>
+    
+        </div>
+        <div class="content-1">
+            <div class="fir">
+               <img class="two" src="../../../assets/images/more.jpg">
+            </div>
+            <div class="sec">
+                <p>More</p>
+            </div>
+    
+        </div>
+
+        
+    </div>
+
+</div>
+

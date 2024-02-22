@@ -1,0 +1,19 @@
+
+<div class="main"> 
+  <app-checkbox-one [todoList]="todo" [popupDisplay]="popup" (checkboxesChanged)="onCheckboxesChanged($event)" ></app-checkbox-one>
+  <div class="two">
+    <img id="one" (click)="transfertodoData()" src="./../assets/arrow.png" >
+    <img  (click)="transferdoneData()" src="./../assets/arrow1.png">
+
+  </div>
+  
+    
+  <app-checkbox-two [doneList]="done"  [popupDisplay]="popupMessage" (checkboxesValueChanged)="checkboxValueChanged($event)">
+  </app-checkbox-two>
+  <router-outlet></router-outlet>
+</div>
+    
+  
+
+
+

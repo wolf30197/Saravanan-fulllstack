@@ -1,0 +1,10 @@
+.one{
+    width:50%;
+}
+.two{
+    width:50%;
+    text-align: center;
+}
+.main{
+    display:flex;
+}

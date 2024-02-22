@@ -1,0 +1,49 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="header">
+  <div class="navcontent">
+    <div class="navbar">Home</div>
+  <div class="navbar">Contact us</div>
+  <div class="navbar"> signup</div>
+  <div class="navbar">login</div>
+  </div>
+  <img src="./../assets/navicon.png"  (mouseover)="showdiv()">
+  
+
+</div>
+<button (click)="nextpage()">next</button>
+{{company}}
+<input [(ngModel)]="company"/>
+<div class="body">
+  <div class="nav" *ngIf="showdata">
+    <div class="navbutton" (click)="showDetail()"  >home</div>
+    <div class="navbutton" >contact</div>
+    <div class="navbutton" >signup</div>
+    <div class="navbutton" >login</div>
+    <div class="navbutton" >detail</div>
+  </div>
+  <div class="blank" *ngIf="showContent">
+
+  </div>
+
+
+</div>
+
+<router-outlet></router-outlet>
+<home [inputValue]="company" (outputValue)="childEvent($event)" [passData]="place" (getData)="getChildEvent($event)" [value]="displayData" (getPassingData)="getPassingDataEvent($event)" (sendCompanyName)="getCompanyData($event)" [sendValue]="place" (sendPlace)="showPlaceName($event)" (sendState)="getStateData($event)"></home>
+{{showData}}
+<p>Campus:{{companyName}}</p>
+<input type="submit" value="submit" (click)="sendServiceData();showServiceData()">
+{{place}}
+<input type="text" [(ngModel)]="place">
+<h2>service:{{serviceValue}}</h2>
+<h1><mark>{{stateData}}</mark></h1>
+<p>{{company|uppercase}}</p>
+<p>{{place |lowercase}}</p>
+<p>{{value |currency}}</p>

@@ -1,0 +1,13 @@
+<div class="topcontainer">
+    <div class="main" *ngIf="hideContent">
+
+<div class="login">
+    <form>
+        <label for="chk" aria-hidden="true">Log in</label>
+        <input type="email" name="email" placeholder="Email" [(ngModel)]="loginObj.userName">
+        <input type="password" name="pswd" placeholder="Password" [(ngModel)]="loginObj.password">
+        <button (click)="onLogin()">Log in</button>
+    </form>
+</div>
+    </div>
+</div>

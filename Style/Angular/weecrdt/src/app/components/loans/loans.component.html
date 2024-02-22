@@ -1,0 +1,26 @@
+<div class="heading">
+    <p class="content">Get the personalized Loan you need</p>
+
+</div>
+
+
+<div class="head">
+    <div class="card" *ngFor="let content of data" >
+        <div class="one">
+           <img [src]="content.images">
+        </div>
+        <div class="two">
+            <p class="main">{{content.header}}</p>
+            <p class="para">Get Your Loan in<span>{{content.GetYourLoan}}</span></p>
+            <ul >
+                <li *ngFor="let set of content.features">{{set}}</li>
+            </ul>
+          
+        </div>
+        <div class="three">
+          <button>ApplyNow!</button>
+        </div>
+
+    </div>
+
+</div>

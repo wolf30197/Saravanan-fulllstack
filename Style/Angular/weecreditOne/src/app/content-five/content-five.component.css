@@ -1,0 +1,18 @@
+.main{
+    display:flex;
+}
+.one{
+    width:50%;
+     align-self: center;
+}
+.two{
+    width:50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    background-color: darkgray;
+    height: 2px;
+    width:98%;
+}

@@ -1,0 +1,18 @@
+ <div class="sub">
+    <p class="para">Primary</p>
+    <p class="para">Promotions</p>
+    <p class="para">Social </p>
+ </div>
+ <div class="main"  *ngFor="let datas of message; let i=index"  (click)="viewMessage(datas)">
+    <div class="first">
+        <img [src]="datas.box">
+        <img [src]="datas.star">
+    </div>
+    <div class="second">
+        <p class="one">{{datas.name}}</p>
+    </div>
+    <div class="third">
+        <p class="two">{{datas.subject}}</p>
+    </div>
+    
+</div>

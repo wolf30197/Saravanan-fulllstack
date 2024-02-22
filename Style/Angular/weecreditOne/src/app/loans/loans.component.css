@@ -1,0 +1,51 @@
+.two{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width:80%;
+    background-color:whitesmoke;
+    border-radius: 10px;
+    display:flex;
+    height:250px;
+}
+.data1{
+width:30%;
+display:flex;
+align-items: center;
+justify-content: center;
+}
+.data2{
+width:45%;
+margin-top: 50px;
+}
+.data3{
+width:25%;
+display:flex;
+align-items: center;
+justify-content: center;
+}
+img{
+    width:150px;
+    height:100px;
+}
+.image{
+    width:150px;
+    height:70px;
+}
+button{
+    background-color: #4d94ff;
+    width:120px;
+    height:50px;
+    border-radius: 10px;
+    border:none;
+}
+.head{
+    font-size: 35px;
+    font-style: sans-serif;
+    color:#4d94ff;
+    text-align: center;
+    font-weight: bold;
+}

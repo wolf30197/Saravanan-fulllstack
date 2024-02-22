@@ -1,0 +1,61 @@
+<div>
+  <app-first-child (getData)="receiveSecondChild($event)"  (getData1)="receiveThirdChild($event)" [firstChild]="data"   ></app-first-child>
+  <app-second-child (getValue)="receiveFirstChild($event)" (getValue1)="receiveThirdChild($event)" [secondChild]="data1" ></app-second-child>
+  <app-third-child (getDataValue)="receiveFirstChild($event)" (getDataValue1)="receiveSecondChild($event)" [thirdChild]="data2" ></app-third-child>
+
+</div>
+<router-outlet></router-outlet>
+<div>
+  <app-fourth-child (Data)="getChildTwo($event)" (Data1)="getChildThree($event)" [fourthChild]="get"></app-fourth-child>
+  <app-fifth-child (Value)="getChildOne($event)" (Value1)="getChildThree($event)" [fifthChild]="get1"></app-fifth-child>
+  <app-sixth-child (Sample)="getChildOne($event)" (Sample1)="getChildTwo($event)" [sixthChild]="get2"  (showimage1)="getImage($event)" (showimage2)="getImage1($event)"  ></app-sixth-child>
+</div>
+<img *ngIf="show" src="https://cdn.pixabay.com/photo/2015/04/27/22/25/sunset-742744_640.jpg" height="200px" width="250px">
+<img  *ngIf="show1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJnYhOraKiUtUjseSZ5aaY0Hm7hh6LBLPfp27aA-MYoA&s" height="200px" width="250px">
+    
+<div>
+  <table >
+    <tr class="row">
+      <th>Name</th>
+      <th>Clg</th>
+      <th>degree</th>
+      <th>Place</th>
+      <th>Work</th>
+      <th>Gender</th>
+    </tr>
+    <tr *ngFor="let student of getStudentData; let i=index"  [ngClass]="{even:even(i)}">
+      <td>{{student.Name}}</td>
+      <td>{{student.Clg}}</td>
+      <td>{{student.degree}}</td>
+      <td>{{student.place}}</td>
+      <td>{{student.work}}</td>
+      <td>{{student.gender}}</td>
+    </tr>
+  </table>
+</div>
+<br>
+<div>
+  <table>
+    <tr style="background-color:cadetblue">
+      <th>Name</th>
+      <th>Department</th>
+      <th>Place</th>
+      <th>Work</th>
+      <th>Degree</th>
+      <th>Age</th>
+      <th>Hometown</th>
+    </tr>
+    <tr *ngFor="let getValue of getData" [ngClass]="{odd:odd(getValue)}">
+      <td>{{getValue.Name}}</td>
+      <td>{{getValue.Department}}</td>
+      <td>{{getValue.Place}}</td>
+      <td>{{getValue.Work}}</td>
+      <td>{{getValue.Degree}}</td>
+      <td>{{getValue.Age}}</td>
+      <td>{{getValue.Hometown}}</td>
+    </tr>
+  </table>
+</div>
+
+
+

@@ -1,0 +1,42 @@
+.head{
+    background-color: #4d94ff;
+    width:100%;
+    height:130px;
+    display:flex;
+}
+.main{
+    width:20%;
+}
+.nav{
+    width:70%;
+    margin-left: 5%;
+    margin-top:6.5%;
+}
+button{
+    background-color: white;
+    width:150px;
+    height:30px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color:#4d94ff;
+    font-weight: bold;
+    font-style: sans-serif;
+    font-size:15px;
+    margin-right:4px;
+    border:none;
+}
+img{
+    height:130px;
+}
+
+link{
+    width:10%;
+
+}
+a{
+    font-size: 20px;
+    font-style: sans-serif;
+    display:flex;
+    flex-direction:column;
+    margin:20px;
+}

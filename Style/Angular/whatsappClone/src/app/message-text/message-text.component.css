@@ -1,0 +1,21 @@
+.text-message{
+    height:548px;
+    width:100%;
+    background-color:#eae6df;
+}
+.chat{
+    display:flex;
+}
+.msg{
+    background-color: white;
+    height:50px;
+    border-radius: 10px;
+    margin:50px;
+}
+.mesg{
+    background-color: white;
+    height:50px;
+    border-radius: 10px;
+    margin:100px;
+    margin-left: 55%;
+}

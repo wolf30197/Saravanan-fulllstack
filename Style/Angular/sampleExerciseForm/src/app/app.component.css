@@ -1,0 +1,15 @@
+table{
+    border:2px solid black;
+}
+td{
+    border:2px solid black;
+}
+th{
+    border:2px solid black;
+}
+div{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:15%;
+}

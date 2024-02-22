@@ -1,0 +1,35 @@
+.chatmessage{
+    height:80px;
+    width:100%;
+    background-color:white;
+    display:flex;
+}:hover{
+    background-color: #d1d7db;
+}
+.line{
+    background-color:black;
+    width:85%;
+    height:1px;
+    margin-left:15%;
+}
+.image{
+    width:20%;
+    height:80px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.name-messagechat{
+    width:80%;
+    height:80px;
+    display:flex;
+    flex-direction: column;
+}
+img{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+}
+p{
+    margin-top: -5px;
+}

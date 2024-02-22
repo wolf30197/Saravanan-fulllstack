@@ -1,0 +1,26 @@
+div{
+    background-color:white;
+}
+p{
+    font-size: 18px;
+    font-style: sans-serif;
+    font-weight: bold;
+    padding-left: 40px;
+   
+}
+.one{
+    width:200px;
+    height:80px;
+    padding-left: 40px;
+    border-radius: 10px;
+}
+.two{
+    width:550px;
+    height:340px;
+    padding-left: 30%;
+}
+.para{
+    font-size: 22px;
+    font-style: sans-serif;
+    font-weight: bold;
+}

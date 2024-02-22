@@ -1,0 +1,16 @@
+<h2>B Component</h2>
+<div class="main">
+   <div class="data">
+   <label *ngFor="let data of doneList ">
+    <input type="checkbox" id="checkedValue" (click)=" checkboxValueChanged(data)">{{data}}
+   </label>
+   <div class="popup" *ngIf="popupDisplay">
+    your folder is empty
+ </div>
+  </div>
+  
+  
+  
+
+    
+</div>

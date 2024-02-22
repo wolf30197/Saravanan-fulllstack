@@ -1,0 +1,85 @@
+.sidenav{
+    width:15.5vw;
+    height:97.5vh;
+    background-color:white;
+    border-right: 1px solid grey;
+    display:flex;
+    flex-direction: column;
+}
+.one{
+    width:12vw;
+    height:130px;
+    margin-left: -60px;
+    margin-top: 10px;
+}
+.first{
+    height:12vh;
+    background-color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.second{
+    height:70vh;
+    background-color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.third{
+    height:17.5vh;
+    background-color: white;
+}
+.content{
+    width:13vw;
+    height:25px;
+    background-color:white;
+    border-radius: 5px;
+    margin:5px;
+    font-size:17px ;
+    padding:10px;
+    display:flex;
+
+}
+.content:hover{
+    background-color: grey;
+}
+.two{
+    width:30px;
+    height:30px;
+}
+.two:nth-last-child(){
+    border-radius: 50%;
+}
+img.two{
+    border-radius: 50%;
+}
+.frst{
+width:20%;
+}
+.scnd{
+width:80%;
+}
+.content-1{
+    width:13vw;
+    height:25px;
+    background-color:white;
+    border-radius: 5px;
+    margin:5px;
+    font-size:17px ;
+    padding:10px;
+    display:flex;
+
+}
+.content-1:hover{
+    background-color: grey;
+}
+.fir{
+    width:20%;
+}
+.sec{
+    width:80%;
+    display:flex;
+    align-items: center;
+}

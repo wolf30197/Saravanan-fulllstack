@@ -1,0 +1,27 @@
+<div class="text">
+   <p class="text"> Check your credit score for FREE!</p>
+</div>
+
+
+<div class="head">
+    <div class="card" *ngFor="let data of creditScoreData">
+        <div class="one">
+            <img [src]='data.images'>
+        </div>
+        <div class="two">
+            <p class="para">{{data.header}}</p>
+        <p>FreeTrial:<span>{{data.FreeTrial}}</span> | MonthlyMembership:<span>{{data.MonthlyMembership}}</span></p>
+        <p>{{data.text }}</p>
+        <ul  >
+            <li *ngFor="let listData of data.features" >{{listData}}</li>
+        </ul>
+
+        </div>
+        <div class="three">
+            <button>Apply Now!</button>
+        </div>
+       
+       
+    </div>
+
+</div>

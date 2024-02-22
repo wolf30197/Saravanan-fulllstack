@@ -1,0 +1,23 @@
+
+
+
+  
+ <table>
+   <tr>
+      <th>userId</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Date</th>
+
+   </tr>
+   <tr *ngFor="let value of displayData">
+      <td>{{value.userId|currency:'USD'}}</td>
+      <td>{{value.id|percent}}</td> 
+      <td>{{value.title|uppercase}}</td>
+      <td>{{value.body|mypipe}}</td>
+      <td>{{date|date:'day'}}</td>
+
+   </tr>
+ </table>
+ <app-view></app-view>

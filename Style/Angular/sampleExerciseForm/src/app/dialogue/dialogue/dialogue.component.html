@@ -1,0 +1,47 @@
+<div class="dialogue">
+       <form [formGroup]="myForm">
+              <div class="">
+                     <div>
+                            <label>Name</label>
+                            <div>
+                                   <input type="text" value="{{selectedValue.name}}">
+                            </div>
+                            
+                     </div>
+                     <div>
+                            <label>College</label>
+                            <div>
+                                   <input type="text" value="{{selectedValue.college}}">
+                            </div>   
+                     </div>
+                     <div>
+                            <label>Degree</label>
+                            <div>
+                                   <input type="text" value="{{selectedValue.degree}}">
+                            </div> 
+                     </div>
+                     <div>
+                            <label>Location</label>
+                            <div>
+                                   <input type="text" value="{{selectedValue.location}}">
+                            </div>    
+                     </div>
+                     <div>
+                            <label>Company</label>
+                            <div>
+                                   <input type="text" value="{{selectedValue.company}}">
+                            </div>
+                            
+                     </div>
+                     <div>
+                            <label>Work</label>
+                            <div>
+                                   <input type="text" value="{{selectedValue.work}}">
+                            </div>
+                            
+                     </div>   
+                     <button type="button" (click)="closeDialogue()">Close</button>
+              </div>
+              
+            </form>
+</div>

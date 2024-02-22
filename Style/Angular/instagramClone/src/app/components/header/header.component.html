@@ -1,0 +1,8 @@
+<div class="header">
+  <img class="larrow" src="../../../assets/images/lessarrow.png" *ngIf="hideButton">
+  <img class="grtarrow" src="../../../assets/images/greaterarrow.png">
+    <div class="data" *ngFor="let data of imagesAndNames">
+      <img [src]="data.image">
+      {{data.name}}
+    </div>  
+</div>

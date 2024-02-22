@@ -1,0 +1,17 @@
+.maincontent{
+    background-color:white;
+    margin-top: -110px;
+    height:678px;
+    width:97%;
+    margin-left: 23px;
+    margin-right: 23px;
+    display:flex;
+}
+.chat{
+    width:30%;
+    background-color: blue;
+}
+.message{
+    width:70%;
+    background-color:white;
+}

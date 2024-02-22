@@ -1,0 +1,60 @@
+
+
+<div class="head">
+  
+</div>
+<div class="content">
+  <div class="maincontent">
+    <div class="content-1">
+    <div class="one"> 
+     <img id="one" src="./../assets/images/Mushfiq1.jpg">
+     <img id="two" src="./../assets/images/download.png">
+     <img id="three" src="./../assets/images/status-icon.png">
+     <img id="four" src="./../assets/images/channel-icon.jpg">
+     <img id="five" src="./../assets/images/new chat-icon.png">
+     <img id="six" src="./../assets/images/kebab.icon.png">
+    </div>
+    <div class="two">
+     <input type="search" placeholder="search or start new chat">
+     <img id="seven" src="./../assets/images/menu_bar.png">
+    </div>
+      <div class="box" *ngFor="let data of arrayOfObjects">
+        <div class="three" >
+
+          <div class="container">
+            <img id="image" [src]="data.image">
+          </div>
+          <div class="container-1">
+            <h3>{{data.name}}</h3> 
+            <p class="data-para">{{data.content}}</p>
+          </div>
+        </div>
+
+        <div class="line"></div>
+      </div>
+
+   
+    
+    </div>
+    <div class="content-2">
+      <div class="content-3">
+        <img class="desktop" src="./../assets/images/desktop-whatsapp.png">
+        <p class="para">Download WhatsApp for Windows</p>
+        <p class="text">Make calls, share your screen and get a faster experience when you download the </p>
+        <p class="text-1">Windows app.</p>
+        <button>Get the app</button>
+        
+      </div>
+      <p class="enc-message">Your personal messages are end to -end encrypted </p>
+      <router-outlet></router-outlet>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  
+
+<router-outlet></router-outlet>

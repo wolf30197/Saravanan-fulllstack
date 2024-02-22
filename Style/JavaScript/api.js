@@ -291,4 +291,9 @@ function sets(value) {
 
 
 
+//Anonymous Function
+let greet=function (name){
+  console.log(name);
+}
 
+greet('Santhosh');

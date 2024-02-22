@@ -1,0 +1,51 @@
+.header{
+    width:100%vw;
+    height:130px;
+    background-color: blue;
+    display:flex;
+}
+.navbar{
+    width:120px;
+    height:30px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    margin:10px;
+}
+.navbar:hover{
+    background-color: brown;
+}
+.navcontent{
+    margin-left:50%;
+    display:flex;
+    margin-top:5%;
+}
+img{
+    width:50px;
+    height:30px;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+.navbutton{
+    background-color: rgb(6, 6, 6);
+    width:250px;
+    height:40px;
+    border:2px solid black;
+    color:white;
+    text-align: center;
+    margin-left:80%;
+}
+.navbutton:hover{
+    background-color: white;
+    color:black;
+}
+.blank{
+    width:250px;
+    height:400px;
+    background-color: blue;
+}
+button{
+    width:100px;
+    height:30px;
+    background-color: blue;
+}

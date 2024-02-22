@@ -1,0 +1,50 @@
+div{
+    height:50.5px;
+    background-color: rgb(255, 255, 255);
+    display:flex;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.sub{
+    display:flex;
+    border:0.5px solid black;
+}
+.para{
+    padding-left: 50px;
+    color:blue;
+}
+p{
+    font-size: 18px;
+    font-style: sans-serif;
+    font-weight: bold;
+}
+img{
+    width:30px;
+    height:30px;
+    margin:10px;
+}
+.first{
+    width:10%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    width:100%;
+    border:0.5px solid black;
+}
+.main:hover{
+    background-color:rgb(218, 218, 227);
+}
+.second{
+    width:20%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.third{
+    width:70%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}

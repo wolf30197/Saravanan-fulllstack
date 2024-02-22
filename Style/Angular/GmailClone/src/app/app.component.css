@@ -1,0 +1,22 @@
+.header{
+    background-color:white;
+    height:70px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    width:100%;
+    display:flex;
+}
+.first{
+    width:20%;
+    background-color:rgb(218, 218, 227);
+    height:625px;
+    
+}
+.second{
+    width:80%;
+    background-color:rgb(245, 245, 249);
+    height:620px;
+}

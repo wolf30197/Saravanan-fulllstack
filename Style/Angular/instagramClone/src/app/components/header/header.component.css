@@ -1,0 +1,33 @@
+.header{
+    display:flex;
+    margin-left:5.4vw;
+    overflow:hidden;
+}
+img{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    border:3px solid rgb(230, 19, 19);
+}
+.data{
+    margin:6px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+.larrow{
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    position:relative;
+    top:20px;
+    left:70px;
+}
+.grtarrow{
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    position:relative;
+    top:20px;
+    left:690px;
+}

@@ -1,0 +1,23 @@
+div{
+    width:400px;
+    height:450px;
+    box-shadow:-5px 5px 10px #191919, 5px -5px 10px #060606;
+    margin-top: 10%;
+}
+input{
+    margin:1px;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+label{
+    margin-top: 10px;
+}

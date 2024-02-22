@@ -1,0 +1,21 @@
+<div class="home" *ngFor="let personData of postPersonData">
+  <div class="home-header">
+    <div class="name">
+     <img class="personImage" [src]="personData.image">
+    </div>
+     <div class="name-locate">
+
+      <span>{{personData.name}}</span>
+      <span>{{personData.location}}</span>
+     
+     </div>
+     <div class="moreoption">
+          <img  class="more"   [src]="personData.moreoption">
+     </div>
+</div>
+
+
+     <div class="post">
+      <img class="postImage" [src]="personData.post">
+  </div>
+    </div>

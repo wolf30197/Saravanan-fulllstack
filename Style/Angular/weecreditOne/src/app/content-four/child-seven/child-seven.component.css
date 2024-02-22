@@ -1,0 +1,13 @@
+p{
+    font-size: 25px;
+    font-style: sans-serif;
+    color:darkgrey;
+    width:81%;
+}
+button{
+    background-color: #4d94ff;
+    width:200px;
+    height:50px;
+    border:none;
+    border-radius: 5px;
+}

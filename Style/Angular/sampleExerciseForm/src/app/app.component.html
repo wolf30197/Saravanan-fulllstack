@@ -1,0 +1,28 @@
+<div>
+  
+<table>
+  
+  <tr>
+    <th>Name</th>
+    <th>College</th>
+    <th>Degree</th>
+    <th>Location</th>
+    <th>Company</th>
+    <th>Work</th>
+    <th>Edit</th>
+  </tr>
+  <tr *ngFor="let datas of studentsInformation;let i=index">
+    <td>{{datas.name}}</td>
+    <td>{{datas.college}}</td>
+    <td>{{datas.degree}}</td>
+    <td>{{datas.location}}</td>
+    <td>{{datas.company}}</td>
+    <td>{{datas.work}}</td>
+    <td><button (click)="editItem(datas)">edit</button></td>
+  </tr>
+</table>
+
+</div>
+<router-outlet></router-outlet>
+
+

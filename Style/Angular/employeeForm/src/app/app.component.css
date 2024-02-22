@@ -1,0 +1,19 @@
+div{
+    width:300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px grey;
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+}
+input{
+    margin:10px;
+}
+h1{
+    font-weight: bold;
+}

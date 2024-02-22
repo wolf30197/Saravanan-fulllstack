@@ -1,0 +1,30 @@
+<div>
+  <table style="border:2px solid black" >
+    <tr  style="background-color: grey;">
+      <th class="header">Name</th>
+      <th class="header">Age</th>
+      <th class="header">Degree</th>
+      <th class="header">Specialization</th>
+      <th class="header">College</th>
+      <th class="header">Native</th>
+      <th class="header">Company</th>
+      <th class="header">Location</th>
+      <th class="header">ShowData</th>
+    </tr>
+    <tr *ngFor="let data of students; let i=index" [ngClass]="{even:design(i)}" [ngClass]="{odd:get(i)}" >
+      <td class="row">{{data.name}}</td>
+      <td class="row">{{data.age}}</td>
+      <td class="row">{{data.degree}}</td>
+      <td class="row">{{data.specialization}}</td>
+      <td class="row">{{data.college}}</td>
+      <td class="row">{{data.native}}</td>
+      <td class="row">{{data.company}}</td>
+      <td class="row">{{data.location}}</td>
+     <td><button (click)="viewStudentData(data)" >ShowData</button></td> 
+    </tr> 
+  </table>
+  <router-outlet></router-outlet>
+</div>
+
+
+

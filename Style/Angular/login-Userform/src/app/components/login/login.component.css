@@ -1,0 +1,59 @@
+.topcontainer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main{
+    width:250px;
+    height:350px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    background-image:url("./../../../assets/images/alexandru-acea--WBYxmW4yuw-unsplash.jpg");
+    background-size: 250px 350px;
+    box-shadow: 
+    10px 0px 15px -10px rgba(0, 0, 0, 0.5), 
+    -10px 0px 15px -10px rgba(0, 0, 0, 0.5);
+}
+.login{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
+form{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input{
+    margin:5px;
+    height:30px;
+    border:none;
+    border-radius: 10px;
+    color:white;
+    background-color: black;
+    text-align: center;
+}
+button{
+    margin-top:20px;
+    height:30PX;
+    width:120px;
+    border-radius: 20px;
+    background-color:blue;
+    color:black;
+    border:none;
+    font-weight: bold;
+}
+label{
+    color:white;
+    font-size: 25px;
+    font-weight: bold;
+    margin:20px;
+}

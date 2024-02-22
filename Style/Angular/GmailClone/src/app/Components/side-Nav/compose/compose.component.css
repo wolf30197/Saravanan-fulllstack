@@ -1,0 +1,23 @@
+img{
+    width:40px;
+    height:40px;
+    padding-top: 10px;
+    border-radius:10px;
+}
+div{
+    background-color:#c2e7ff;
+    font-size: 18px;
+    font-style: sans-serif;
+    width:140px;
+    height:60px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    border:none;
+    margin:15px;
+    font-weight: bold;
+}
+div:hover{
+    background-color:#c2e7ff;
+}

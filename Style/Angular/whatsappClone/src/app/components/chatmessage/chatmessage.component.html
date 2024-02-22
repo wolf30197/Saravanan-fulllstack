@@ -1,0 +1,11 @@
+<div class="chatmessage" (click)="handleDivClick()">
+    <div class="image">
+     <img [src]="personData.image">
+    </div>
+    <div class="name-messagechat">
+         <h3>{{personData.name}}</h3> 
+         <p>{{personData.message}}</p>
+    </div>
+</div>
+<app-message [parentValue]="clickedValue"  [showValue]="getpersonData"></app-message>
+<div class="line"></div>

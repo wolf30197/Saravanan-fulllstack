@@ -1,0 +1,29 @@
+<form [formGroup]="userForm"  (ngSubmit)="submit()">
+    <label>firstName:</label>
+    <input type="text" name="firstName" formControlName="firstName">
+    <label>lastName:</label>
+    <input type="text" name="lastName" formControlName="lastName">
+    <label>email:</label>
+    <input type="text" name="email" formControlName="email">
+    <label>MobileNumber:</label>
+    <input type="text" name="number"formControlName="number">
+    <label>College:</label>
+    <input type="text" name="college" formControlName="college">  
+    <label>Qualification</label>
+    <input type="text" name="Qualification" formControlName="Qualification">
+    <p>Address</p>
+    <label>Street</label>
+    <input type="text" name="streetName" formControlName="streetName">
+    <label>Village</label>
+    <input type="text" name="village" formControlName="village">
+    <label>Panchayat</label>
+    <input type="text" name="panchayat" formControlName="panchayat">
+    <label>District</label>
+    <input type="text" name="district" formControlName="district">
+    <label>Pincode</label>
+    <input type="text" name="pincode" formControlName="pincode">
+    <label>State</label>
+    <input type="text" name="state" formControlName="state">
+    <input type="submit" value="submit">
+
+</form>

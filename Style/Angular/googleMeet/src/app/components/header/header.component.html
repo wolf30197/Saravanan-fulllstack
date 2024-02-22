@@ -1,0 +1,28 @@
+<div class="main">
+    <img class="meetlogo"  src="./../../../assets/images/meet-logo.png">
+    <div class="time">
+        <span>{{hours}}:{{minutes}}:{{clock}} 
+     <ul> <li>{{weekday}}</li> </ul> ,{{getMonth}}  {{dates}}
+        </span>
+    </div>
+    <div>
+        <img class="support"  src="./../../../assets/images/questionmark-logo.png" (click)="popupShow()">
+        <img class="report" src="./../../../assets/images/report a problem icon.png">
+        <img class="setting" src="./../../../assets/images/settings.png">
+    </div>
+    <div>
+        <img class="googleapps" src="./../../../assets/images/google apps icon.jpg">
+        <img class="mail" src="./../../../assets/images/name.png">
+    </div>
+    <div class="supportpopup" *ngIf="popupview">
+        <button class="targ">Help</button>
+        <button class="targ" >Training</button>
+        <button class="targ">Terms of service</button>
+        <button class="targ">Privacy policy</button>
+        <button class="targ">Terms Summary</button>
+
+    </div>
+    
+</div>
+
+

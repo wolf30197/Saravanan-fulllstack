@@ -1,0 +1,28 @@
+.main{ 
+    height:97.5vh;
+    width:97.5vw;
+    background-color: blanchedalmond;
+    display:flex;
+}
+.content1{
+    width:55vw;
+    height:97.5vh;
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  overflow-y: scroll;
+}
+.content1::-webkit-scrollbar {
+    display: none;
+  }
+.header{
+    width:55vw;
+    height:16vh;
+    background-color: white;
+}
+.home{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}

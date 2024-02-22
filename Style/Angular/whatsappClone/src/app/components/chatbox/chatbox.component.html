@@ -1,0 +1,4 @@
+<div>
+    <app-chatmessage *ngFor="let person of peopleData; let i = index"      (click)="sendData(person)" [personData]="person" [getpersonData]="personDataValue">  </app-chatmessage>
+   
+</div>
