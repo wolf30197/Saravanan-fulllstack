@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search</title>
+    <style>
+    
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header form {
+    margin-top: 15px;
+}
+
+header input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+header button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #218838;
+}
+
+main {
+    padding: 20px;
+}
+
+#recipes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.recipe-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    max-width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.recipe-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.recipe-card h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.recipe-card p {
+    color: #555;
+    font-size: 0.9em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header input[type="text"] {
+        width: 80%;
+    }
+
+    #recipes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header input[type="text"] {
+        width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recipe Finder</h1>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search for recipes..." required>
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <main>
+        <div id="recipes-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recipe Finder. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+document.addEventListener('DOMContentLoaded', () => {
+    const searchForm = document.getElementById('search-form');
+    const searchInput = document.getElementById('search-input');
+    const recipesContainer = document.getElementById('recipes-container');
+
+    searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const query = searchInput.value.trim();
+        fetchRecipes(query);
+    });
+
+    async function fetchRecipes(query) {
+        const apiKey = 'YOUR_API_KEY'; 
+        const apiUrl = "https://-Cocktail-Database-API.proxy-production.allthingsdev.co/api/json/v1/1/search.php";
+
+        try {
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+            displayRecipes(data.results);
+        } catch (error) {
+            console.error('Error fetching recipes:', error);
+            recipesContainer.innerHTML = '<p>Sorry, something went wrong. Please try again later.</p>';
+        }
+    }
+
+    function displayRecipes(recipes) {
+        recipesContainer.innerHTML = '';
+
+        if (recipes.length === 0) {
+            recipesContainer.innerHTML = '<p>No recipes found. Please try a different search term.</p>';
+            return;
+        }
+
+        recipes.forEach(recipe => {
+            const recipeCard = document.createElement('div');
+            recipeCard.classList.add('recipe-card');
+
+            recipeCard.innerHTML = `
+                <img src="${recipe.image}" alt="${recipe.title}">
+                <h3>${recipe.title}</h3>
+                <p>Ready in ${recipe.readyInMinutes} minutes</p>
+            `;
+
+            recipesContainer.appendChild(recipeCard);
+        });
+    }
+});
+
+    </script>
+</body>
+</html>
+

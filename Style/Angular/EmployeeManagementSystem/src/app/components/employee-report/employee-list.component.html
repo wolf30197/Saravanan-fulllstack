@@ -1,0 +1,74 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
+</head>
+
+<div class="main">
+    
+    <div class="employeeData">
+        <div class="employeeTableContainer">
+            <div class="headerContainer">
+                <section class="head">
+                    <h1>Employee List</h1>
+              </section>
+              <section class="addemployee" (click)="showEmployeeForm()">
+                 <strong><p class="addEmployeenav">
+                    <span> <i class="fas fa-user"id="icons"></i></span>AddEmployee</p>
+                 </strong> 
+              </section>
+            </div>
+            
+            <div class="body">
+                <div class="employeeReport">
+
+                    <table>
+                        <tr >
+                            <th>EmployeeID</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>Gender</th>
+                            <th>Email</th>
+                            <th>MobileNo</th>
+                            <th>Department</th>
+                            <th>Location</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr *ngFor="let employee of employeeDetails;let i=index">
+                            <td><strong>{{employee.employeeid}}</strong></td>
+                            <td>{{employee.firstName}}</td>
+                            <td>{{employee.lastName}}</td>
+                            <td>{{employee.gender}}</td>
+                            <td>{{employee.email}}</td>
+                            <td>{{employee.mobileNo}}</td>
+                            <td>{{employee.selectDepartment}}</td>
+                            <td>{{employee.location}}</td>
+                            <td (click)="getEmployeeDetails(i);getEditEmployeeData()"><span><i class="fas fa-edit icon"></i></span>
+                                <span><i class="fas fa-trash remove"></i></span>
+                            </td>
+                            
+                        </tr>
+                        <tr *ngFor="let item of getEmployee; let j=index">
+                            <td><strong>{{item.employeeid}}</strong></td>
+                            <td>{{item.firstName}}</td>
+                            <td>{{item.lastName}}</td>
+                            <td>{{item.gender}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.mobileNumber}}</td>
+                            <td>{{item.selectDepartment}}</td>
+                            <td>{{item.location}}</td>
+                            <td (click)="getEmployeeDetail(j);getEditEmployeeData()"><span><i class="fas fa-edit"></i></span></td>
+                            <td><span><i class="fas fa-trash remove"></i></span></td>
+                        </tr>
+                    </table>
+                </div>
+    
+    
+
+            </div>
+            
+        
+       
+    </div>
+    </div>
+
+</div>

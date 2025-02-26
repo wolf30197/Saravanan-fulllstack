@@ -1,0 +1,233 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
+</head>
+<div class="admin-container">
+    
+    <div class="admin-page">
+        <div class="main-one">
+            <div class="dash-header">
+                <div class="header-icon">
+                    <span class="fa-stack" id="icons">
+                        <i class="fas fa-user-tie fa-stack-1x" style="left:-40px">
+                        </i>  
+                        <i class="fas fa-laptop fa-stack-1x" style="left:-10px">
+                        </i>
+                      </span>
+                </div>
+                <div class="project-title">
+                    <p class="proj-name">Employee MS</p>
+                </div>
+                
+
+                
+
+            </div>
+            <div class="navigation">
+                <div class="navigate">
+                    <div class="navigate-icon-container">
+                        <i class="fas fa-home" id="icons"></i> 
+                    </div>
+                    <div class="navigation-container-text">
+                        <p class="navbar-fields">Dashboard</p>
+                    </div>
+                    <div class="border-end"></div>
+                     </div>
+
+
+                <div class="navigate" (click) ="showEmployeeForm()">
+                    <div class="navigate-icon-container">
+                    <i class="fas fa-user"id="icons"></i>
+                    </div>
+                    <div class="navigation-container-text">
+                    <p class="navbar-fields" >   New Employee</p>
+                    </div>
+                    <div class="border-end"></div>
+                </div>
+
+
+                <div class="navigate" (click)="showEmployeeReport()">
+                    <div class="navigate-icon-container">
+                    <i class="fas fa-users" id="icons"></i>
+                    </div>
+                    <div class="navigation-container-text">
+                    <p class="navbar-fields"> EmployeeList</p>
+                    </div>
+                    <div class="border-end"></div>
+                </div>
+                
+                <div class="navigate">
+                    <div class="navigate-icon-container">
+                    <span class="fa-stack fa-lg" id="icons">
+                        <i class="fas fa-user fa-stack-1x"></i> 
+                        <i class="fas fa-laptop fa-stack-2x"></i> 
+                      </span> 
+                    </div>
+                    <div class="navigation-container-text" (click)="showAssignTask()">
+                      <p class="navbar-fields" >Assign Task</p>
+                    </div>
+                    <div class="border-end"></div>
+                </div>
+                      <div class="navigate">
+                        <div class="navigate-icon-container">
+                        <span class="fa-stack fa-lg" id="icons">
+                            <i class="fas fa-user fa-stack-1x"></i> 
+                            <i class="fas fa-file-alt fa-stack-2x"></i> 
+                          </span>
+                        </div>
+                        <div class="navigation-container-text">
+                          <p class="navbar-fields"> Employee Task Report</p>
+                        </div>
+                        <div class="border-end"></div>
+                    </div>
+                <div class="navigate">
+                    <div class="navigate-icon-container">
+                    <i class="fas fa-university" id="icons"></i>
+                    </div>
+                    <div class="navigation-container-text">
+                    <p class="navbar-fields">Employee Salary</p>
+                    </div>
+                    <div class="border-end"></div>
+                </div>
+                <div class="navigate">
+                    <div class="navigate-icon-container">
+                    <i class="fas fa-calendar-alt" id="icons"></i>
+                    </div>
+                    <div class="navigation-container-text">
+                    <p class="navbar-fields">Employee Leave</p>
+                    </div>
+                    <div class="border-end"></div>
+                </div>
+                <div class="navigate">
+                    <div class="navigate-icon-container">
+                        <i class="fas fa-desktop icons" id="icons"></i>
+                          
+                    </div>
+                    <div class="navigation-container-text">
+                          <p class="navbar-fields">Employee Project</p>
+                    </div>
+                    <div class="border-end"></div>
+                        </div>
+                
+
+                        <div class="navigate">
+                            <div class="navigate-icon-container">
+                                <i class="fas fa-clock icon" id="icons"></i>
+                                  
+                            </div>
+                            <div class="navigation-container-text">
+                                <p class="navbar-fields">Employee Attendance</p>
+                            </div>
+                            <div class="border-end"></div>
+                                </div>
+
+
+            </div>
+
+        </div>
+        <div class="main-two">
+            <div class="main-header">
+                <div class="navcontent">
+                    <i class="fas fa-bars" id="navbars"></i>
+                </div>
+                <div class="searchcontent">
+                    <input type="search" placeholder="search here">
+                
+                </div>
+                <div class="userCredential">
+                 <p class="userData">{{userCredential.userId}}</p>
+                </div>
+                
+                
+
+            </div>
+            <div class="employees-items">
+                <div class="item-list">
+                    <div>
+                        <p class="item-list-name">Employees</p>
+                        <p class="item-list-count">5</p>
+                    </div>
+                    <div>
+                    <i class="fas fa-users" id="icons" id="user-icon"></i>
+
+                    </div>
+                    
+
+
+                </div>
+                <div class="item-list">
+
+                    <div>
+                        <p class="item-list-name">Department</p>
+                        <p class="item-list-count">20</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-laptop fa-3x" id="icons" id="user-icon"></i> 
+                    </div>
+
+                    </div>
+                    
+
+                
+
+                <div class="item-list">
+
+                    <div>
+                        <p class="item-list-name">Project</p>
+                        <p class="item-list-count">120</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-desktop icons" id="icons" id="user-icon"></i>
+
+                    </div>
+                    
+
+                </div>
+
+                <div class="item-list">
+
+                    <div>
+                        <p class="item-list-name">Attendance</p>
+                        <p class="item-list-count">500</p>
+                    </div>
+                    <div>
+                    
+                        <i class="fas fa-clock icon" id="icons" id="user-icon"></i>
+                    </div>
+                    
+
+                </div>
+
+
+            </div>
+
+
+            <div class="graph-content">
+
+                <div class="graph-box">
+                    
+                    
+                    
+
+
+
+                </div>
+                <div class="graph-box">
+
+                </div>
+                 
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+        </div>
+        
+
+</div>

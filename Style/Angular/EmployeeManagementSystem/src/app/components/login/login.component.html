@@ -1,0 +1,53 @@
+<div class="login-main" >
+   <router-outlet></router-outlet>
+    <div class="log"*ngIf="hidelogin" >
+        <div class="main">
+
+            <div class="login-container"  *ngIf="hidelogin" >
+                <div class="login">
+                    <div class="head">
+                        <p>Login Now</p>
+                    </div>
+                   <div class="content">
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        <input class="element" type="text" formControlName="userId" placeholder="Enter your email">
+                        <input class="element" type="email" formControlName="password" placeholder="Enter your password" minlength="6" >
+                        <button type="submit" [class.valid-button]="loginForm.valid" [class.invalid-button]="!loginForm.valid" [disabled]="!loginForm.valid">Login</button>
+                      </form>
+                      
+                   </div>
+                   <div class="dont-account">
+                      <span>Dont have an Account</span>
+                      <button *ngIf="hidebutton">Signup</button>
+                   </div>
+            
+                    
+                </div>
+               
+            </div>
+            <div class="image">
+                  <img src="../../../assets/Images/employee management.jpg">
+            </div>
+        
+
+        </div>
+        
+
+       
+
+
+
+
+        
+
+    </div>
+
+    
+
+
+
+</div>
+
+
+
+        

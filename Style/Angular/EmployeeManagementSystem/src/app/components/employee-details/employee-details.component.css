@@ -1,0 +1,201 @@
+
+.main{
+  width:100%;
+  height:710px;
+  display:flex;
+  flex-direction: column;
+}
+form {
+    max-width:90%;
+    height:550px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius:10px;
+    background-color:white;
+}
+  .employee-container{
+    width:100%;
+    height:710px;
+    background-size: 100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .employee-detail-container{
+    width:80%;
+    height:680px;
+    display:flex;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border-radius: 0.8rem;
+    box-sizing: border-box;
+    background-color: lightgray;
+  }
+  .header-container{
+    width:97.4%;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    height:5%;
+    background-color:rgb(17, 10, 144);
+    padding:.8rem 1rem;
+    display:flex;
+  }
+  .form-container{
+    width:100%;
+    height:680px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .header-text{
+    padding-left: 50px;
+    padding-top:10px;
+  }
+  
+  
+  
+  
+  div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  input,select{
+    width:80%;
+    height:30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  
+
+  
+   button{
+    width:30%;
+    padding: 10px;
+    margin-top:20px;
+    background-color:grey;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .valid-button{
+    background-color: green;
+  }
+  p{
+    font-size: 25px;
+    color:white;
+    font-weight: bold;
+  }
+  .one{
+    width:100%;
+    height:80px;
+    padding-top:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .first{
+    width:33.3%;
+  }
+  .fields{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+
+  }
+  .second{
+    width:33.3%;
+  }
+  .third{
+    width:33.3%;
+  }
+  .two{
+    width:100%;
+    height:80px;
+    display:flex;
+  }
+  
+  .fourth{
+    width:33.3%;
+  }
+  .fifth{
+    width:33.3%;
+  }
+  .sixth{
+    width:33.3%;
+  }
+  .three{
+    width:100%;
+    height:80px;
+    display:flex;
+  }
+  .seventh{
+    width:33.3%;
+  }
+  .eigth{
+    width:33.3%;
+  }
+  .nineth{
+    width:33.3%;
+  }
+  
+  .four{
+    width:100%;
+    height:80px;
+    display:flex;
+    flex-direction: row;
+  }
+  
+  .tenth{
+    width:33.3%;
+  }
+  .eleventh{
+    width:33.3%;
+  }
+  .twelveth{
+    width:33.3%;
+  }
+  
+  .five{
+    width:100%;
+    height:67px;
+    display:flex;
+  }
+  .thirteenth{
+    width:33.3%;
+  }
+  .fourteenth{
+    width:33.3%;  
+  }
+  
+  
+  
+  input[type="file"]::file-selector-button{
+       height:30px;
+       border:none;
+       margin-right: 20px;
+  }
+  
+  select{
+    padding-left: 10px;
+  }
+  select option{
+    font-size:14px;
+    background-color:white;
+    height:40px;
+  }
+  

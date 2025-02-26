@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Home</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+        </header>
+
+        <section class="task-form-section">
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="Task Description" required>
+                <input type="text" id="team-input" placeholder="Assign to Team" required>
+                <button type="submit" class="btn">Add Task</button>
+            </form>
+        </section>
+
+        <section class="view-tasks">
+            <a href="tasks.html" class="btn">View Assigned Tasks</a>
+            <a href="completed.html" class="btn">View Completed Tasks</a>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

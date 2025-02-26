@@ -1,0 +1,14 @@
+{
+  "name": "sample-practise-server",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "saravanan",
+  "license": "ISC",
+  "description": "sample practise server",
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

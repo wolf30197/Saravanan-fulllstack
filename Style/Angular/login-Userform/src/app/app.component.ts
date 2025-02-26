@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { CanRouteService } from './service/can-route.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'login-Userform';
+  constructor( private dataservice:CanRouteService){
+
+  }
+  public name:string='Name';
+
+  ngOnInit():void{
+     this.dataservice.getData().subscribe(data=>this.name=data);
+  }
 }

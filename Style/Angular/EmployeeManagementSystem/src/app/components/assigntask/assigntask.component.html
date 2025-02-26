@@ -1,0 +1,180 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
+</head>
+
+
+<div class="main"> 
+    <div class="assignTask-Container">
+        <div class="task-Container">
+          <div class="header-container">
+            <section class="head">
+              <h1>Assign Task</h1>
+        </section>
+        <section class="addtask">
+          <strong><p class="addnewtask">
+           
+             <span>
+            <i class="fas fa-laptop fa-stack-2x"></i></span>AddTask</p>
+          </strong> 
+       </section>
+        
+       </div>
+                <div class="form-container">
+                  
+
+                    <form [formGroup]="taskAssignForm" (ngSubmit)="onSubmit()">
+
+
+
+                        <div class="one">
+                            <div class="first">
+                              <div class="fields">
+                                <label for="FirstName">TaskName</label>
+                              <input type="text" formControlName="taskName">
+                              </div>
+                              
+                            </div>
+                            
+                            <div class="second">
+                                <div class="fields">
+                                  <label for="selectDepartment">Priority</label>
+                                <select formControlName="priority">
+                                  <option value="Low">Low</option>
+                                  <option value="Medium">Medium</option>
+                                  <option value="High">High</option>
+                                  
+                                </select>
+                                </div>
+                                
+                              </div>
+                              <!-- <div class="team">
+                                <div class="fields">
+                                  <label for="selectTeam">Team</label>
+                                <select formControlName="Teams">
+                                  <option value="Low">Anish</option>
+                                  <option value="Medium">Vijay</option>
+                                  <option value="High">Santhosh</option>
+                                  
+                                </select>
+                                </div>
+
+                              </div>
+                              -->
+                            
+                            
+                           
+                    
+                           </div>
+                    <div class="two">
+                     
+                      
+       
+                      <div class="third">
+                        <div class="fields">
+                          <label for="mobileNumber">StartDate</label>
+                          <input type="date" class="custom-input" formControlName="taskstartDate">
+                        </div>
+                       
+                      </div>
+       
+       
+                      <div class="fourth">
+                       <div class="fields">
+                         <label for="mobileNumber">StartTime</label>
+                         <input type="time"class="custom-input" formControlName="taskstartTime">
+                       </div>
+                      
+                     </div>
+
+                     <div class="fifth">
+                        <div class="fields">
+                          <label for="mobileNumber">TaskendDate</label>
+                          <input type="date"class="custom-input" formControlName="taskendDate">
+                        </div>
+                       
+                      </div>
+       
+                     
+                    </div>
+                    
+                    <div class="three">
+                    
+                      
+                    
+       
+       
+                      <div class="sixth">
+                       <div class="fields">
+                         <label for="mobileNumber">TaskendTime</label>
+                         <input type="time" class="custom-input"formControlName="taskendTime">
+                       </div>
+                      
+                     </div>
+       
+                     <div class="seventh">
+                      <div class="fields">
+                        <label for="selectDepartment">Status</label>
+                      <select formControlName="status">
+                        <option value="Pending">Pending</option>
+                        <option value="InProgress">InProgress</option>
+                        <option value="Completed">Completed</option>
+                        
+                      </select>
+                      </div>
+                     </div>
+                    
+                     </div>
+
+
+                     <div class="four">
+                        <div class="eighth">
+                            <div class="textfield">
+                                <label for="taskDescription">Description</label>
+                                <textarea id="taskDescription" formControlName="taskDescription"></textarea>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="five">
+                      <div class="nineth">
+                        <div class="button">
+                          <button type="submit"  [class.valid-button]="taskAssignForm.valid" [class.invalid-button]="!taskAssignForm.valid" [disabled]="!taskAssignForm.valid">Submit</button>
+                        </div>
+                      </div>
+                       
+                     </div>
+
+
+                     
+
+
+                      
+                     
+            
+            
+          </form>
+
+
+
+
+                   </div>
+
+                    
+
+
+
+
+                </div>
+              
+                
+          
+            
+                   
+              
+           
+              
+
+        </div>
+    </div>
+
+

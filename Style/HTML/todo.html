@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+}
+
+.edit-btn, .delete-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #0b7dda;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #e31b0c;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Todo List</h1>
+        <input type="text" id="todo-input" placeholder="Enter a task">
+        <button onclick="addTodo()">Add</button>
+        <ul id="todo-list"></ul>
+    </div>
+    
+
+    <script >
+        function addTodo() {
+    var inputValue = document.getElementById("todo-input").value;
+    if (inputValue === '') {
+        alert("You must Enter a Task!");
+    } else {
+        var li = document.createElement("li");
+
+        var text = document.createElement("span");
+        text.textContent = inputValue;
+        li.appendChild(text);
+
+        var editBtn = document.createElement("button");
+        editBtn.textContent = "Edit";
+        editBtn.className = "edit-btn";
+        editBtn.onclick = function() {
+            editTodo(li, text);
+        };
+        li.appendChild(editBtn);
+
+        var deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.className = "delete-btn";
+        deleteBtn.onclick = function() {
+            deleteTodo(li);
+        };
+        li.appendChild(deleteBtn);
+
+        document.getElementById("todo-list").appendChild(li);
+        document.getElementById("todo-input").value = "";
+    }
+}
+
+function editTodo(li, text) {
+    var newTask = prompt("Edit your task", text.textContent);
+    if (newTask !== null && newTask !== '') {
+        text.textContent = newTask;
+    }
+}
+
+function deleteTodo(li) {
+    document.getElementById("todo-list").removeChild(li);
+}
+
+    </script>
+
+</body>
+</html>

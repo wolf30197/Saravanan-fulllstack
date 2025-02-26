@@ -1,0 +1,206 @@
+<div class="main">
+  <div class="employee-container">
+    <div class="employee-detail-container">
+      
+      <div class="header-container">
+         <p class="header-text">Employee Detail</p>
+      </div>
+      <div class="form-container">
+        <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        
+      
+          
+            
+           <div class="one">
+            <div class="first">
+              <div class="fields">
+                <label for="FirstName" class="items">FirstName</label>
+              <input type="text" formControlName="firstName">
+              </div>
+              
+            </div>
+            <div class="second">
+              <div class="fields">
+                <label for="LastName" class="items">LastName</label>
+                <input type="text" formControlName="lastName">
+              </div>
+             
+            </div>
+            <div class="third">
+              <div class="fields">
+                <label for="email" class="items">Email</label>
+                <input type="email" formControlName="email">
+              </div>
+              
+            </div>
+    
+    
+           </div>
+    <div class="two">
+     
+      <div class="fourth">
+        <div class="fields">
+          <label for="selectDepartment" class="items">Department</label>
+        <select formControlName="selectDepartment">
+          <option value="Angular Developer">Angular Developer</option>
+          <option value="ReactDeveloper">React Developer</option>
+          <option value=".Net Developer">.Net Developer</option>
+          <option value="Php Developer">Php Developer</option>
+          <option value="Tester">Manual Tester</option>
+          <option value="Tester">Automation Tester</option>
+          <option value="Cloud Architect">Cloud Architect</option>
+        </select>
+        </div>
+        
+      </div>
+      <div class="fifth">
+        <div class="fields">
+          <label for="mobileNumber" class="items">Mobile Number</label>
+          <input type="text" formControlName="mobileNumber">
+        </div>
+       
+      </div>
+      <div class="sixth">
+        <div class="fields">
+          <label for="gender" class="items">Gender</label>
+        <select id="gender" name="gender" formControlName="gender">
+          <option value="" disabled selected>Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="three">
+    
+      
+    
+      <div class="nineth">
+        <div class="fields">
+          <label for="selectCountry" class="items">Select Country</label>
+            <select  formControlName="selectCountry">
+              <option value="" disabled selected>Select</option>
+              <option value="India">India</option>
+              <option value="UK">Uk</option>
+              <option value="USA">USA</option>
+              <option value="Japan">Japan</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Dubai">Dubai</option>
+              <option value="China">China</option>
+              <option value="Germany">Germany</option>
+              <option value="Korea">Korea</option>
+            </select>
+          
+         
+        </div>
+       
+      </div>
+    
+      <div class="seventh">
+        <div class="fields">
+          <label for="address" class="items">FullAddress</label>
+        <input type="text" formControlName="address">
+        </div>
+        
+      </div>
+    
+    
+      <div class="eigth">
+        <div class="fields">
+          <label for="state" class="items">location</label>
+        <input type="text" formControlName="location">
+        </div>
+        
+      </div>
+     
+     
+     
+      
+    
+    </div>
+           
+    
+    <div class="four">
+      <div class="tenth">
+        <div class="fields">
+          <label for="dob" class="items">Date of Birth</label>
+        <input type="date" formControlName="dob">
+        </div>
+        
+      </div>
+      <div class="eleventh">
+        <div class="fields">
+          <label for="empid" class="items">Employee Code/ID</label>
+        <input type="text" formControlName="employeeid">
+        </div>
+        
+      </div>
+      
+        <div class="twelveth">
+          <div class="fields">
+            <label for="nationality" class="items">Status</label>
+            <select  formControlName="status" placeholder="select an option">
+              <option value="" disabled selected>Select</option>
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>
+          </div>
+         
+        </div>
+      
+    </div>
+          
+            
+            
+              <div class="five">
+                <div class="thirteenth">
+                  <div class="fields">
+                    <label for="degree" class="items">Degree</label>
+                  <input type="text" formControlName="degree">
+                  </div>
+                  
+                </div>
+                <div class="fourteenth">
+                  <div class="fields">
+                    <label for="image" class="items">Image</label>
+                      <input type="file" formControlName="chooseFile">
+                  </div>
+                 
+                </div>
+                
+               
+    
+              </div>
+             
+       
+              
+            
+            <div class="button">
+              <button type="submit"  [class.valid-button]="employeeForm.valid" [class.invalid-button]="!employeeForm.valid" [disabled]="!employeeForm.valid">Submit</button>
+            </div>
+            
+    
+    
+    
+    
+    
+          
+           
+          </form>
+  
+      </div>
+      
+
+    </div>
+    
+
+  </div>
+  
+    
+      
+      
+</div>
+

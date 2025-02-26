@@ -10,7 +10,7 @@ import { CanRouteService } from 'src/app/service/can-route.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-constructor( private router:Router,public route:CanRouteService){
+constructor( private router:Router,public route:CanRouteService,public data:CanRouteService){
 
 }
   signupUsers:any[]=[];
@@ -23,8 +23,11 @@ constructor( private router:Router,public route:CanRouteService){
   public hideContent:boolean=true;
 ngOnInit():void{
 const localData=localStorage.getItem('signUpUsers');
+this.route.getData().subscribe((data:any) => console.log(data));
 if(localData !=null){
 this.signupUsers=JSON.parse(localData);
+
+
 }
 }
 onSignUp(){
@@ -36,17 +39,25 @@ onSignUp(){
     // Navigate to another page
     this.router.navigate(['/my-login']);
      this.route.canRoute=true;
+     
   this.signupObj={
     userName:'',
     email:'',
     password:''
     
   }
+  this.route.setData('Saravanan');
   this.hideContent=false;
+ 
 }
 else{
+ 
   alert('fields are empty');
 }
  
 }
 }
+function removeItem(index: any, string: any) {
+  throw new Error('Function not implemented.');
+}
+

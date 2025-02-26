@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#quiz {
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.answer:hover {
+    background-color: #0056b3;
+}
+
+#next-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#next-btn:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz App</h1>
+        <div id="quiz">
+            <div class="question" id="question"></div>
+            <div class="answers">
+                <button class="answer" onclick="selectAnswer(0)"></button>
+                <button class="answer" onclick="selectAnswer(1)"></button>
+                <button class="answer" onclick="selectAnswer(2)"></button>
+                <button class="answer" onclick="selectAnswer(3)"></button>
+            </div>
+            <button id="next-btn" onclick="nextQuestion()">Next</button>
+        </div>
+        <div id="result" class="hidden">
+            <h2>Your Score: <span id="score"></span></h2>
+            <button onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+    </div>
+    <script >
+        const questions = [
+    {
+        question: "What is the capital of France?",
+        answers: ["Paris", "London", "Berlin", "Madrid"],
+        correct: 0
+    },
+    {
+        question: "Which planet is known as the Red Planet?",
+        answers: ["Earth", "Mars", "Jupiter", "Saturn"],
+        correct: 1
+    },
+    {
+        question: "What is the largest ocean on Earth?",
+        answers: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+        correct: 3
+    },
+    {
+        question: "Who wrote 'Hamlet'?",
+        answers: ["Charles Dickens", "Leo Tolstoy", "William Shakespeare", "Mark Twain"],
+        correct: 2
+    }
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function loadQuestion() {
+    const questionElement = document.getElementById('question');
+    const answerButtons = document.querySelectorAll('.answer');
+    const currentQuestion = questions[currentQuestionIndex];
+
+    questionElement.textContent = currentQuestion.question;
+    answerButtons.forEach((button, index) => {
+        button.textContent = currentQuestion.answers[index];
+    });
+
+    document.getElementById('next-btn').classList.add('hidden');
+}
+
+function selectAnswer(index) {
+    const currentQuestion = questions[currentQuestionIndex];
+    if (index === currentQuestion.correct) {
+        score++;
+    }
+    document.getElementById('next-btn').classList.remove('hidden');
+}
+
+function nextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
+}
+
+function showResult() {
+    document.getElementById('quiz').classList.add('hidden');
+    document.getElementById('result').classList.remove('hidden');
+    document.getElementById('score').textContent = `${score}/${questions.length}`;
+}
+
+function restartQuiz() {
+    score = 0;
+    currentQuestionIndex = 0;
+    document.getElementById('quiz').classList.remove('hidden');
+    document.getElementById('result').classList.add('hidden');
+    loadQuestion();
+}
+
+document.addEventListener('DOMContentLoaded', loadQuestion);
+
+    </script>
+</body>
+</html>

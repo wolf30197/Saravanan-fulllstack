@@ -1,0 +1,199 @@
+<div>
+    <div class="header">
+      <p>Edit Employee Data</p>
+    </div>
+    
+      <form [formGroup]="employee" (ngSubmit)="onSubmit()">
+        <div class="main" *ngFor="let item of editableData" >
+         <div class="one" >
+          <div class="first">
+            <div class="fields">
+              <label for="FirstName">FirstName</label>
+            <input type="text" formControlName="fName" [(ngModel)]="item.firstName">
+            </div>
+            
+          </div>
+          <div class="second">
+            <div class="fields">
+              <label for="LastName">LastName</label>
+              <input type="text" formControlName="lName">
+            </div>
+           
+          </div>
+          <div class="third">
+            <div class="fields">
+              <label for="email">Email</label>
+              <input type="email" formControlName="email">
+            </div>
+            
+          </div>
+  
+  
+         </div>
+  <div class="two">
+   
+    <div class="fourth">
+      <div class="fields">
+        <label for="selectDepartment">Department</label>
+      <input type="text" formControlName="Department">
+      </div>
+      
+    </div>
+    <div class="fifth">
+      <div class="fields">
+        <label for="mobileNumber">Mobile Number</label>
+        <input type="text" formControlName="mobile" >
+      </div>
+     
+    </div>
+    <div class="sixth">
+      <div class="fields">
+        <label for="gender">Gender</label>
+      <select id="gender" name="gender" formControlName="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="three">
+  
+    <div class="seventh">
+      <div class="fields">
+        <label for="address">FullAddress</label>
+      <input type="text" formControlName="address">
+      </div>
+      
+    </div>
+    <div class="eigth">
+      <div class="fields">
+        <label for="state">location</label>
+      <input type="text" formControlName="location">
+      </div>
+      
+    </div>
+    <div class="nineth">
+      <div class="fields">
+        <label for="selectCountry">Select Country</label>
+        <select  formControlName="selectCountry" >
+          <option value="India">India</option>
+          <option value="UK">Uk</option>
+          <option value="USA">USA</option>
+          <option value="Japan">Japan</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Dubai">Dubai</option>
+          <option value="China">China</option>
+          <option value="Germany">Germany</option>
+          <option value="Korea">Korea</option>
+        </select>
+      </div>
+     
+    </div>
+  
+   
+    
+  
+  </div>
+         
+  
+  <div class="four">
+    <div class="tenth">
+      <div class="fields">
+        <label for="dob">Date of Birth</label>
+      <input type="date" formControlName="dob">
+      </div>
+      
+    </div>
+    <div class="eleventh">
+      <div class="fields">
+        <label for="empid">Employee ID</label>
+      <input type="text" formControlName="employeeid" >
+      </div>
+      
+    </div>
+    
+      <div class="twelveth">
+        <div class="fields">
+          <label for="nationality">Nationality</label>
+          <input type="text" formControlName="nationality" >
+        </div>
+       
+      </div>
+    
+  </div>
+        
+          <h2>Education Details</h2>
+          <div class="line"></div>
+          <div formGroupName="education">
+            <div class="five" >
+              <div class="thirteenth">
+                <div class="fields">
+                  <label for="degree">Degree</label>
+                <input type="text" formControlName="degree" >
+                </div>
+                
+              </div>
+              <div class="fourteenth">
+                <div class="fields">
+                  <label for="institution">Institution</label>
+                <input type="text" formControlName="institution" >
+                </div>
+                
+              </div>
+              <div class="fifteenth">
+                <div class="fields">
+                  <label for="place">Grade</label>
+                  <input type="text" formControlName="grade" >
+                </div>
+               
+              </div>
+  
+            </div>
+           
+      <div class="six" >
+        <div class="sixteenth">
+          <div class="fields">
+            <label for="place">Location</label>
+            <input type="text" formControlName="place">
+          </div>
+         
+        </div>
+        <div class="seventeenth">
+          <div class="fields">
+            <label for="graduationYear">Graduation Year</label>
+          <input type="number" formControlName="graduationYear" >
+          </div>
+          
+        </div>
+        <div class="eighteenth">
+          <div class="fields">
+            <label for="secondaryno">Secondary Mobile Number</label>
+            <input type="text" formControlName="secondaryNumber" >
+          </div>
+         
+        </div>
+      </div>
+  
+            
+          </div>
+          <div class="button">
+            <button type="submit">Submit</button>
+          </div>
+          
+  
+  
+  
+  
+  
+        </div>
+         
+        </form>
+  
+        
+        
+  </div>
+  
+  

@@ -1,0 +1,40 @@
+<div class="signup" *ngIf="hidesignup">
+
+    <div class="signup-main" *ngIf="hidesignup">
+        <div class="signup-container">
+            <div class="head">
+              <p>Sign Up!</p>
+            </div>
+            <div class="content">
+                <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="form-content">
+            <label>Username</label>
+        </div>
+        <div class="form-content">
+            <input type="text" formControlName="username" class="first-ip" placeholder="Enter your name">
+        </div>
+        <div class="form-content">
+            <label>Password</label>
+        </div>
+       <div class="form-content" >
+        <input type="text"  formControlName="password" class="first-ip" placeholder="Enter your password" minlength="8">
+       </div>
+                    <div class="form-content">
+                        <button type="submit"  [class.valid-button]="signupForm.valid" [class.invalid-button]="!signupForm.valid" [disabled]="!signupForm.valid">Signup</button>
+                    </div>
+                    
+    
+                </form>
+            
+            </div>
+            <div class="signin">
+            
+            </div>
+        </div>
+    
+    </div>
+    
+</div>
+    
+
+
